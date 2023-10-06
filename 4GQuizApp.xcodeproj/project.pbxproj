@@ -28,6 +28,7 @@
 		2E6A59652AD014970061CC1D /* RoundedButtonReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59642AD014970061CC1D /* RoundedButtonReusable.swift */; };
 		2E6A59692AD015210061CC1D /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59682AD015210061CC1D /* View+Extension.swift */; };
 		2E6A596B2AD015CE0061CC1D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A596A2AD015CE0061CC1D /* Color.swift */; };
+		2E6A59702AD017C30061CC1D /* QuizCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A596F2AD017C30061CC1D /* QuizCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		2E6A59642AD014970061CC1D /* RoundedButtonReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonReusable.swift; sourceTree = "<group>"; };
 		2E6A59682AD015210061CC1D /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		2E6A596A2AD015CE0061CC1D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		2E6A596F2AD017C30061CC1D /* QuizCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 		2E6A595D2AD013610061CC1D /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A596C2AD017890061CC1D /* QuestionList */,
 				2E6A595F2AD0136A0061CC1D /* WelcomeView */,
 			);
 			path = Module;
@@ -295,6 +298,30 @@
 				2E6A596A2AD015CE0061CC1D /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2E6A596C2AD017890061CC1D /* QuestionList */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A596E2AD017910061CC1D /* ViewModel */,
+				2E6A596D2AD0178E0061CC1D /* View */,
+			);
+			path = QuestionList;
+			sourceTree = "<group>";
+		};
+		2E6A596D2AD0178E0061CC1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A596F2AD017C30061CC1D /* QuizCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E6A596E2AD017910061CC1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E6A59462ACFF5C30061CC1D /* NetworkManager.swift in Sources */,
+				2E6A59702AD017C30061CC1D /* QuizCardView.swift in Sources */,
 				2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */,
 				2E6A59652AD014970061CC1D /* RoundedButtonReusable.swift in Sources */,
 				2E6A59572AD00EA00061CC1D /* QuizRepositoryProtocol.swift in Sources */,
