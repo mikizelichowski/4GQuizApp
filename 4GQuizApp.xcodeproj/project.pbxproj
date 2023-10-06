@@ -30,6 +30,7 @@
 		2E6A596B2AD015CE0061CC1D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A596A2AD015CE0061CC1D /* Color.swift */; };
 		2E6A59702AD017C30061CC1D /* QuizCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A596F2AD017C30061CC1D /* QuizCardView.swift */; };
 		2E6A59722AD0182C0061CC1D /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59712AD0182C0061CC1D /* Text+Extension.swift */; };
+		2E6A59742AD018EF0061CC1D /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59732AD018EF0061CC1D /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		2E6A596A2AD015CE0061CC1D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2E6A596F2AD017C30061CC1D /* QuizCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCardView.swift; sourceTree = "<group>"; };
 		2E6A59712AD0182C0061CC1D /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
+		2E6A59732AD018EF0061CC1D /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +301,7 @@
 				2E6A59682AD015210061CC1D /* View+Extension.swift */,
 				2E6A596A2AD015CE0061CC1D /* Color.swift */,
 				2E6A59712AD0182C0061CC1D /* Text+Extension.swift */,
+				2E6A59732AD018EF0061CC1D /* RoundedCorner.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				2E6A59192ACFEA0B0061CC1D /* ContentView.swift in Sources */,
 				2E6A59172ACFEA0B0061CC1D /* _GQuizAppApp.swift in Sources */,
 				2E6A59442ACFF5470061CC1D /* APIError.swift in Sources */,
+				2E6A59742AD018EF0061CC1D /* RoundedCorner.swift in Sources */,
 				2E6A59532AD00C010061CC1D /* QuizApiRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
