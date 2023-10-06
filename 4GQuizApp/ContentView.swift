@@ -21,7 +21,7 @@ struct ContentView: View {
             ZStack {
                 Color.softBlue
                     .ignoresSafeArea()
-              //  QuestionListView()
+                QuestionListView()
             }
         }
     }

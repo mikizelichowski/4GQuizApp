@@ -19,7 +19,9 @@ struct QuizCardView: View {
                         .foregroundColor(.royal)
                         .hLeading()
                     
-                   
+                    CustomImageHelper(imagekey: ImageHelper.shared.getPath(width: quiz.mainPhoto.width, height: quiz.mainPhoto.height, urlName: quiz.mainPhoto.url))
+                        .frame(width: 300, height: 200)
+                        .hCenter()
                     HStack(spacing: 0) {
                         ForEach(quiz.tags, id:\.uid) { tag in
                             Text("#\(tag.name)")
