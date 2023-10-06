@@ -31,6 +31,10 @@
 		2E6A59702AD017C30061CC1D /* QuizCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A596F2AD017C30061CC1D /* QuizCardView.swift */; };
 		2E6A59722AD0182C0061CC1D /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59712AD0182C0061CC1D /* Text+Extension.swift */; };
 		2E6A59742AD018EF0061CC1D /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59732AD018EF0061CC1D /* RoundedCorner.swift */; };
+		2E6A59772AD019BE0061CC1D /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59762AD019BE0061CC1D /* CacheManager.swift */; };
+		2E6A597A2AD01A010061CC1D /* CustomImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59792AD01A010061CC1D /* CustomImageHelper.swift */; };
+		2E6A597C2AD01A3C0061CC1D /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A597B2AD01A3C0061CC1D /* ViewStates.swift */; };
+		2E6A597E2AD01E300061CC1D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A597D2AD01E300061CC1D /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		2E6A596F2AD017C30061CC1D /* QuizCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCardView.swift; sourceTree = "<group>"; };
 		2E6A59712AD0182C0061CC1D /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
 		2E6A59732AD018EF0061CC1D /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		2E6A59762AD019BE0061CC1D /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		2E6A59792AD01A010061CC1D /* CustomImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageHelper.swift; sourceTree = "<group>"; };
+		2E6A597B2AD01A3C0061CC1D /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
+		2E6A597D2AD01E300061CC1D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,7 +298,10 @@
 		2E6A59662AD015090061CC1D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A59782AD019EB0061CC1D /* ImageHelper */,
+				2E6A59752AD019980061CC1D /* CacheManager */,
 				2E6A59672AD0150D0061CC1D /* Extensions */,
+				2E6A597B2AD01A3C0061CC1D /* ViewStates.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -302,6 +313,7 @@
 				2E6A596A2AD015CE0061CC1D /* Color.swift */,
 				2E6A59712AD0182C0061CC1D /* Text+Extension.swift */,
 				2E6A59732AD018EF0061CC1D /* RoundedCorner.swift */,
+				2E6A597D2AD01E300061CC1D /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -328,6 +340,22 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2E6A59752AD019980061CC1D /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59762AD019BE0061CC1D /* CacheManager.swift */,
+			);
+			path = CacheManager;
+			sourceTree = "<group>";
+		};
+		2E6A59782AD019EB0061CC1D /* ImageHelper */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59792AD01A010061CC1D /* CustomImageHelper.swift */,
+			);
+			path = ImageHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,7 +490,9 @@
 			files = (
 				2E6A59462ACFF5C30061CC1D /* NetworkManager.swift in Sources */,
 				2E6A59702AD017C30061CC1D /* QuizCardView.swift in Sources */,
+				2E6A597C2AD01A3C0061CC1D /* ViewStates.swift in Sources */,
 				2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */,
+				2E6A597A2AD01A010061CC1D /* CustomImageHelper.swift in Sources */,
 				2E6A59652AD014970061CC1D /* RoundedButtonReusable.swift in Sources */,
 				2E6A59722AD0182C0061CC1D /* Text+Extension.swift in Sources */,
 				2E6A59572AD00EA00061CC1D /* QuizRepositoryProtocol.swift in Sources */,
@@ -470,12 +500,14 @@
 				2E6A596B2AD015CE0061CC1D /* Color.swift in Sources */,
 				2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */,
 				2E6A594C2AD00A420061CC1D /* Quiz.swift in Sources */,
+				2E6A597E2AD01E300061CC1D /* String+Extension.swift in Sources */,
 				2E6A59692AD015210061CC1D /* View+Extension.swift in Sources */,
 				2E6A59552AD00C1C0061CC1D /* QuizApiRepository.swift in Sources */,
 				2E6A59622AD013BA0061CC1D /* WelcomeView.swift in Sources */,
 				2E6A595C2AD0101A0061CC1D /* DIProvider.swift in Sources */,
 				2E6A59192ACFEA0B0061CC1D /* ContentView.swift in Sources */,
 				2E6A59172ACFEA0B0061CC1D /* _GQuizAppApp.swift in Sources */,
+				2E6A59772AD019BE0061CC1D /* CacheManager.swift in Sources */,
 				2E6A59442ACFF5470061CC1D /* APIError.swift in Sources */,
 				2E6A59742AD018EF0061CC1D /* RoundedCorner.swift in Sources */,
 				2E6A59532AD00C010061CC1D /* QuizApiRepositoryProtocol.swift in Sources */,
