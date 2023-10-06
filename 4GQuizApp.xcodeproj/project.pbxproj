@@ -19,6 +19,10 @@
 		2E6A59492ACFF5D40061CC1D /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59482ACFF5D40061CC1D /* APIConstants.swift */; };
 		2E6A594C2AD00A420061CC1D /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A594B2AD00A420061CC1D /* Quiz.swift */; };
 		2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A594D2AD00A4E0061CC1D /* QuizDetailModel.swift */; };
+		2E6A59532AD00C010061CC1D /* QuizApiRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59522AD00C010061CC1D /* QuizApiRepositoryProtocol.swift */; };
+		2E6A59552AD00C1C0061CC1D /* QuizApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59542AD00C1C0061CC1D /* QuizApiRepository.swift */; };
+		2E6A59572AD00EA00061CC1D /* QuizRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59562AD00E9F0061CC1D /* QuizRepositoryProtocol.swift */; };
+		2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59582AD00EA60061CC1D /* QuizRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		2E6A59482ACFF5D40061CC1D /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		2E6A594B2AD00A420061CC1D /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		2E6A594D2AD00A4E0061CC1D /* QuizDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDetailModel.swift; sourceTree = "<group>"; };
+		2E6A59522AD00C010061CC1D /* QuizApiRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizApiRepositoryProtocol.swift; sourceTree = "<group>"; };
+		2E6A59542AD00C1C0061CC1D /* QuizApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizApiRepository.swift; sourceTree = "<group>"; };
+		2E6A59562AD00E9F0061CC1D /* QuizRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepositoryProtocol.swift; sourceTree = "<group>"; };
+		2E6A59582AD00EA60061CC1D /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 		2E6A59152ACFEA0B0061CC1D /* 4GQuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A594F2AD00BD90061CC1D /* DataModules */,
 				2E6A594A2AD00A100061CC1D /* Model */,
 				2E6A59402ACFF5250061CC1D /* Network */,
 				2E6A59162ACFEA0B0061CC1D /* _GQuizAppApp.swift */,
@@ -180,6 +189,33 @@
 				2E6A594D2AD00A4E0061CC1D /* QuizDetailModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2E6A594F2AD00BD90061CC1D /* DataModules */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59502AD00BE10061CC1D /* QuizRepository */,
+			);
+			path = DataModules;
+			sourceTree = "<group>";
+		};
+		2E6A59502AD00BE10061CC1D /* QuizRepository */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59512AD00BEB0061CC1D /* API */,
+				2E6A59562AD00E9F0061CC1D /* QuizRepositoryProtocol.swift */,
+				2E6A59582AD00EA60061CC1D /* QuizRepository.swift */,
+			);
+			path = QuizRepository;
+			sourceTree = "<group>";
+		};
+		2E6A59512AD00BEB0061CC1D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59522AD00C010061CC1D /* QuizApiRepositoryProtocol.swift */,
+				2E6A59542AD00C1C0061CC1D /* QuizApiRepository.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,11 +350,15 @@
 			files = (
 				2E6A59462ACFF5C30061CC1D /* NetworkManager.swift in Sources */,
 				2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */,
+				2E6A59572AD00EA00061CC1D /* QuizRepositoryProtocol.swift in Sources */,
 				2E6A59492ACFF5D40061CC1D /* APIConstants.swift in Sources */,
+				2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */,
 				2E6A594C2AD00A420061CC1D /* Quiz.swift in Sources */,
+				2E6A59552AD00C1C0061CC1D /* QuizApiRepository.swift in Sources */,
 				2E6A59192ACFEA0B0061CC1D /* ContentView.swift in Sources */,
 				2E6A59172ACFEA0B0061CC1D /* _GQuizAppApp.swift in Sources */,
 				2E6A59442ACFF5470061CC1D /* APIError.swift in Sources */,
+				2E6A59532AD00C010061CC1D /* QuizApiRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
