@@ -23,7 +23,7 @@ struct QuizCardView: View {
                     HStack(spacing: 0) {
                         ForEach(quiz.tags, id:\.uid) { tag in
                             Text("#\(tag.name)")
-                               
+                                .smallTitle()
                         }
                     }
                 }
