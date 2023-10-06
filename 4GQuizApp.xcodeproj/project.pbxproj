@@ -43,6 +43,7 @@
 		2E6A59952AD069D70061CC1D /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59942AD069D70061CC1D /* CustomHeader.swift */; };
 		2E6A59982AD06A130061CC1D /* ReusableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59972AD06A130061CC1D /* ReusableButton.swift */; };
 		2E6A599B2AD06A3B0061CC1D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A599A2AD06A3B0061CC1D /* ProgressBar.swift */; };
+		2E6A599F2AD06BD00061CC1D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A599E2AD06BD00061CC1D /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		2E6A59942AD069D70061CC1D /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
 		2E6A59972AD06A130061CC1D /* ReusableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableButton.swift; sourceTree = "<group>"; };
 		2E6A599A2AD06A3B0061CC1D /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		2E6A599E2AD06BD00061CC1D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 		2E6A595D2AD013610061CC1D /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A599C2AD06BBF0061CC1D /* InfoView */,
 				2E6A598C2AD05A5B0061CC1D /* DetailQuiz */,
 				2E6A596C2AD017890061CC1D /* QuestionList */,
 				2E6A595F2AD0136A0061CC1D /* WelcomeView */,
@@ -438,6 +441,22 @@
 			path = ProgressBar;
 			sourceTree = "<group>";
 		};
+		2E6A599C2AD06BBF0061CC1D /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A599D2AD06BC40061CC1D /* View */,
+			);
+			path = InfoView;
+			sourceTree = "<group>";
+		};
+		2E6A599D2AD06BC40061CC1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A599E2AD06BD00061CC1D /* InfoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -584,6 +603,7 @@
 				2E6A59852AD020D90061CC1D /* ProgressBarView.swift in Sources */,
 				2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */,
 				2E6A594C2AD00A420061CC1D /* Quiz.swift in Sources */,
+				2E6A599F2AD06BD00061CC1D /* InfoView.swift in Sources */,
 				2E6A597E2AD01E300061CC1D /* String+Extension.swift in Sources */,
 				2E6A59692AD015210061CC1D /* View+Extension.swift in Sources */,
 				2E6A59552AD00C1C0061CC1D /* QuizApiRepository.swift in Sources */,

@@ -99,7 +99,12 @@ struct DetailQuizView: View {
                 ZStack {
                     Color.aquaMarine
                         .opacity(0.3)
-                    // Add info view
+                    InfoView(title: quiz.title,
+                             description: quiz.content) {
+                        withAnimation {
+                            showPopupInfo = false
+                        }
+                    }
                 }
                 .vCenter()
                 .hCenter()
