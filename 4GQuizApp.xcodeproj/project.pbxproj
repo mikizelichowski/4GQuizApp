@@ -23,6 +23,7 @@
 		2E6A59552AD00C1C0061CC1D /* QuizApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59542AD00C1C0061CC1D /* QuizApiRepository.swift */; };
 		2E6A59572AD00EA00061CC1D /* QuizRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59562AD00E9F0061CC1D /* QuizRepositoryProtocol.swift */; };
 		2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59582AD00EA60061CC1D /* QuizRepository.swift */; };
+		2E6A595C2AD0101A0061CC1D /* DIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A595B2AD0101A0061CC1D /* DIProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		2E6A59542AD00C1C0061CC1D /* QuizApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizApiRepository.swift; sourceTree = "<group>"; };
 		2E6A59562AD00E9F0061CC1D /* QuizRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepositoryProtocol.swift; sourceTree = "<group>"; };
 		2E6A59582AD00EA60061CC1D /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
+		2E6A595B2AD0101A0061CC1D /* DIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		2E6A59152ACFEA0B0061CC1D /* 4GQuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A595A2AD010010061CC1D /* DI */,
 				2E6A594F2AD00BD90061CC1D /* DataModules */,
 				2E6A594A2AD00A100061CC1D /* Model */,
 				2E6A59402ACFF5250061CC1D /* Network */,
@@ -216,6 +219,14 @@
 				2E6A59542AD00C1C0061CC1D /* QuizApiRepository.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		2E6A595A2AD010010061CC1D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A595B2AD0101A0061CC1D /* DIProvider.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +366,7 @@
 				2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */,
 				2E6A594C2AD00A420061CC1D /* Quiz.swift in Sources */,
 				2E6A59552AD00C1C0061CC1D /* QuizApiRepository.swift in Sources */,
+				2E6A595C2AD0101A0061CC1D /* DIProvider.swift in Sources */,
 				2E6A59192ACFEA0B0061CC1D /* ContentView.swift in Sources */,
 				2E6A59172ACFEA0B0061CC1D /* _GQuizAppApp.swift in Sources */,
 				2E6A59442ACFF5470061CC1D /* APIError.swift in Sources */,
