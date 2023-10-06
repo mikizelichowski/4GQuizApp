@@ -17,6 +17,8 @@
 		2E6A59442ACFF5470061CC1D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59432ACFF5470061CC1D /* APIError.swift */; };
 		2E6A59462ACFF5C30061CC1D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59452ACFF5C30061CC1D /* NetworkManager.swift */; };
 		2E6A59492ACFF5D40061CC1D /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59482ACFF5D40061CC1D /* APIConstants.swift */; };
+		2E6A594C2AD00A420061CC1D /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A594B2AD00A420061CC1D /* Quiz.swift */; };
+		2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A594D2AD00A4E0061CC1D /* QuizDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		2E6A59432ACFF5470061CC1D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		2E6A59452ACFF5C30061CC1D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2E6A59482ACFF5D40061CC1D /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		2E6A594B2AD00A420061CC1D /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		2E6A594D2AD00A4E0061CC1D /* QuizDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		2E6A59152ACFEA0B0061CC1D /* 4GQuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A594A2AD00A100061CC1D /* Model */,
 				2E6A59402ACFF5250061CC1D /* Network */,
 				2E6A59162ACFEA0B0061CC1D /* _GQuizAppApp.swift */,
 				2E6A59182ACFEA0B0061CC1D /* ContentView.swift */,
@@ -166,6 +171,15 @@
 				2E6A59482ACFF5D40061CC1D /* APIConstants.swift */,
 			);
 			path = APIConstants;
+			sourceTree = "<group>";
+		};
+		2E6A594A2AD00A100061CC1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A594B2AD00A420061CC1D /* Quiz.swift */,
+				2E6A594D2AD00A4E0061CC1D /* QuizDetailModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +313,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E6A59462ACFF5C30061CC1D /* NetworkManager.swift in Sources */,
+				2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */,
 				2E6A59492ACFF5D40061CC1D /* APIConstants.swift in Sources */,
+				2E6A594C2AD00A420061CC1D /* Quiz.swift in Sources */,
 				2E6A59192ACFEA0B0061CC1D /* ContentView.swift in Sources */,
 				2E6A59172ACFEA0B0061CC1D /* _GQuizAppApp.swift in Sources */,
 				2E6A59442ACFF5470061CC1D /* APIError.swift in Sources */,
