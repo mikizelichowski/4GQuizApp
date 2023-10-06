@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var presentMainView: Bool = false
     var body: some View {
-        VStack {
-            Image("4G")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            ZStack {
+                WelcomeView(presentNextView: $presentMainView)
+                    .hCenter()
+            }
+            .ignoresSafeArea()
         }
-        .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        .fullScreenCover(isPresented: $presentMainView) {
+            ZStack {
+                Color.softBlue
+                    .ignoresSafeArea()
+              //  QuestionListView()
+            }
+        }
     }
 }
