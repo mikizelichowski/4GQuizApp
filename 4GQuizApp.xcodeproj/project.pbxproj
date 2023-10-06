@@ -38,6 +38,11 @@
 		2E6A59802AD01EC20061CC1D /* QuestionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A597F2AD01EC20061CC1D /* QuestionListView.swift */; };
 		2E6A59822AD01EED0061CC1D /* QuestionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59812AD01EED0061CC1D /* QuestionListViewModel.swift */; };
 		2E6A59852AD020D90061CC1D /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59842AD020D90061CC1D /* ProgressBarView.swift */; };
+		2E6A59902AD05A950061CC1D /* DetailQuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A598F2AD05A950061CC1D /* DetailQuizViewModel.swift */; };
+		2E6A59922AD05AB90061CC1D /* DetailQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59912AD05AB90061CC1D /* DetailQuizView.swift */; };
+		2E6A59952AD069D70061CC1D /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59942AD069D70061CC1D /* CustomHeader.swift */; };
+		2E6A59982AD06A130061CC1D /* ReusableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59972AD06A130061CC1D /* ReusableButton.swift */; };
+		2E6A599B2AD06A3B0061CC1D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A599A2AD06A3B0061CC1D /* ProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +97,11 @@
 		2E6A597F2AD01EC20061CC1D /* QuestionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListView.swift; sourceTree = "<group>"; };
 		2E6A59812AD01EED0061CC1D /* QuestionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListViewModel.swift; sourceTree = "<group>"; };
 		2E6A59842AD020D90061CC1D /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		2E6A598F2AD05A950061CC1D /* DetailQuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuizViewModel.swift; sourceTree = "<group>"; };
+		2E6A59912AD05AB90061CC1D /* DetailQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuizView.swift; sourceTree = "<group>"; };
+		2E6A59942AD069D70061CC1D /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
+		2E6A59972AD06A130061CC1D /* ReusableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableButton.swift; sourceTree = "<group>"; };
+		2E6A599A2AD06A3B0061CC1D /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +273,7 @@
 		2E6A595D2AD013610061CC1D /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A598C2AD05A5B0061CC1D /* DetailQuiz */,
 				2E6A596C2AD017890061CC1D /* QuestionList */,
 				2E6A595F2AD0136A0061CC1D /* WelcomeView */,
 			);
@@ -272,6 +283,9 @@
 		2E6A595E2AD013640061CC1D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A59992AD06A360061CC1D /* ProgressBar */,
+				2E6A59962AD06A0D0061CC1D /* ReusableButton */,
+				2E6A59932AD069D10061CC1D /* CustomHeader */,
 				2E6A59832AD020CD0061CC1D /* ProgressBarView */,
 				2E6A59632AD014910061CC1D /* RoundedButtonReusable */,
 			);
@@ -373,6 +387,55 @@
 				2E6A59842AD020D90061CC1D /* ProgressBarView.swift */,
 			);
 			path = ProgressBarView;
+			sourceTree = "<group>";
+		};
+		2E6A598C2AD05A5B0061CC1D /* DetailQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A598E2AD05A610061CC1D /* ViewModel */,
+				2E6A598D2AD05A5E0061CC1D /* View */,
+			);
+			path = DetailQuiz;
+			sourceTree = "<group>";
+		};
+		2E6A598D2AD05A5E0061CC1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59912AD05AB90061CC1D /* DetailQuizView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E6A598E2AD05A610061CC1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A598F2AD05A950061CC1D /* DetailQuizViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2E6A59932AD069D10061CC1D /* CustomHeader */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59942AD069D70061CC1D /* CustomHeader.swift */,
+			);
+			path = CustomHeader;
+			sourceTree = "<group>";
+		};
+		2E6A59962AD06A0D0061CC1D /* ReusableButton */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59972AD06A130061CC1D /* ReusableButton.swift */,
+			);
+			path = ReusableButton;
+			sourceTree = "<group>";
+		};
+		2E6A59992AD06A360061CC1D /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A599A2AD06A3B0061CC1D /* ProgressBar.swift */,
+			);
+			path = ProgressBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +570,7 @@
 			files = (
 				2E6A59462ACFF5C30061CC1D /* NetworkManager.swift in Sources */,
 				2E6A59702AD017C30061CC1D /* QuizCardView.swift in Sources */,
+				2E6A59952AD069D70061CC1D /* CustomHeader.swift in Sources */,
 				2E6A597C2AD01A3C0061CC1D /* ViewStates.swift in Sources */,
 				2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */,
 				2E6A597A2AD01A010061CC1D /* CustomImageHelper.swift in Sources */,
@@ -515,6 +579,7 @@
 				2E6A59572AD00EA00061CC1D /* QuizRepositoryProtocol.swift in Sources */,
 				2E6A59492ACFF5D40061CC1D /* APIConstants.swift in Sources */,
 				2E6A59822AD01EED0061CC1D /* QuestionListViewModel.swift in Sources */,
+				2E6A59922AD05AB90061CC1D /* DetailQuizView.swift in Sources */,
 				2E6A596B2AD015CE0061CC1D /* Color.swift in Sources */,
 				2E6A59852AD020D90061CC1D /* ProgressBarView.swift in Sources */,
 				2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */,
@@ -522,12 +587,15 @@
 				2E6A597E2AD01E300061CC1D /* String+Extension.swift in Sources */,
 				2E6A59692AD015210061CC1D /* View+Extension.swift in Sources */,
 				2E6A59552AD00C1C0061CC1D /* QuizApiRepository.swift in Sources */,
+				2E6A59902AD05A950061CC1D /* DetailQuizViewModel.swift in Sources */,
 				2E6A59622AD013BA0061CC1D /* WelcomeView.swift in Sources */,
 				2E6A59802AD01EC20061CC1D /* QuestionListView.swift in Sources */,
+				2E6A599B2AD06A3B0061CC1D /* ProgressBar.swift in Sources */,
 				2E6A595C2AD0101A0061CC1D /* DIProvider.swift in Sources */,
 				2E6A59192ACFEA0B0061CC1D /* ContentView.swift in Sources */,
 				2E6A59172ACFEA0B0061CC1D /* _GQuizAppApp.swift in Sources */,
 				2E6A59772AD019BE0061CC1D /* CacheManager.swift in Sources */,
+				2E6A59982AD06A130061CC1D /* ReusableButton.swift in Sources */,
 				2E6A59442ACFF5470061CC1D /* APIError.swift in Sources */,
 				2E6A59742AD018EF0061CC1D /* RoundedCorner.swift in Sources */,
 				2E6A59532AD00C010061CC1D /* QuizApiRepositoryProtocol.swift in Sources */,

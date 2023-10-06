@@ -49,6 +49,9 @@ struct QuestionListView: View {
         .fullScreenCover(isPresented: $isPresentDetailView, content: {
             ZStack {
                 Color.lightBlueGreyThree.ignoresSafeArea()
+                if let quiz = viewModel.quizDetail {
+                    DetailQuizView(quiz: quiz)
+                }
             }
         })
         .overlay {
