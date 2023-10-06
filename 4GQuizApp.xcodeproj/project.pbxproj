@@ -24,6 +24,9 @@
 		2E6A59572AD00EA00061CC1D /* QuizRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59562AD00E9F0061CC1D /* QuizRepositoryProtocol.swift */; };
 		2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59582AD00EA60061CC1D /* QuizRepository.swift */; };
 		2E6A595C2AD0101A0061CC1D /* DIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A595B2AD0101A0061CC1D /* DIProvider.swift */; };
+		2E6A59622AD013BA0061CC1D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59612AD013BA0061CC1D /* WelcomeView.swift */; };
+		2E6A59652AD014970061CC1D /* RoundedButtonReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59642AD014970061CC1D /* RoundedButtonReusable.swift */; };
+		2E6A59692AD015210061CC1D /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59682AD015210061CC1D /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		2E6A59562AD00E9F0061CC1D /* QuizRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepositoryProtocol.swift; sourceTree = "<group>"; };
 		2E6A59582AD00EA60061CC1D /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
 		2E6A595B2AD0101A0061CC1D /* DIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIProvider.swift; sourceTree = "<group>"; };
+		2E6A59612AD013BA0061CC1D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		2E6A59642AD014970061CC1D /* RoundedButtonReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonReusable.swift; sourceTree = "<group>"; };
+		2E6A59682AD015210061CC1D /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,9 @@
 		2E6A59152ACFEA0B0061CC1D /* 4GQuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A59662AD015090061CC1D /* Helper */,
+				2E6A595E2AD013640061CC1D /* Components */,
+				2E6A595D2AD013610061CC1D /* Module */,
 				2E6A595A2AD010010061CC1D /* DI */,
 				2E6A594F2AD00BD90061CC1D /* DataModules */,
 				2E6A594A2AD00A100061CC1D /* Model */,
@@ -227,6 +236,62 @@
 				2E6A595B2AD0101A0061CC1D /* DIProvider.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		2E6A595D2AD013610061CC1D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A595F2AD0136A0061CC1D /* WelcomeView */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2E6A595E2AD013640061CC1D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59632AD014910061CC1D /* RoundedButtonReusable */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2E6A595F2AD0136A0061CC1D /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59602AD013720061CC1D /* View */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		2E6A59602AD013720061CC1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59612AD013BA0061CC1D /* WelcomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E6A59632AD014910061CC1D /* RoundedButtonReusable */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59642AD014970061CC1D /* RoundedButtonReusable.swift */,
+			);
+			path = RoundedButtonReusable;
+			sourceTree = "<group>";
+		};
+		2E6A59662AD015090061CC1D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59672AD0150D0061CC1D /* Extensions */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2E6A59672AD0150D0061CC1D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59682AD015210061CC1D /* View+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,11 +426,14 @@
 			files = (
 				2E6A59462ACFF5C30061CC1D /* NetworkManager.swift in Sources */,
 				2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */,
+				2E6A59652AD014970061CC1D /* RoundedButtonReusable.swift in Sources */,
 				2E6A59572AD00EA00061CC1D /* QuizRepositoryProtocol.swift in Sources */,
 				2E6A59492ACFF5D40061CC1D /* APIConstants.swift in Sources */,
 				2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */,
 				2E6A594C2AD00A420061CC1D /* Quiz.swift in Sources */,
+				2E6A59692AD015210061CC1D /* View+Extension.swift in Sources */,
 				2E6A59552AD00C1C0061CC1D /* QuizApiRepository.swift in Sources */,
+				2E6A59622AD013BA0061CC1D /* WelcomeView.swift in Sources */,
 				2E6A595C2AD0101A0061CC1D /* DIProvider.swift in Sources */,
 				2E6A59192ACFEA0B0061CC1D /* ContentView.swift in Sources */,
 				2E6A59172ACFEA0B0061CC1D /* _GQuizAppApp.swift in Sources */,
