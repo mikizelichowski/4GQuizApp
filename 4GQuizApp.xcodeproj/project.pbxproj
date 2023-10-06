@@ -15,6 +15,8 @@
 		2E6A59322ACFEA0D0061CC1D /* _GQuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59312ACFEA0D0061CC1D /* _GQuizAppUITests.swift */; };
 		2E6A59342ACFEA0D0061CC1D /* _GQuizAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59332ACFEA0D0061CC1D /* _GQuizAppUITestsLaunchTests.swift */; };
 		2E6A59442ACFF5470061CC1D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59432ACFF5470061CC1D /* APIError.swift */; };
+		2E6A59462ACFF5C30061CC1D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59452ACFF5C30061CC1D /* NetworkManager.swift */; };
+		2E6A59492ACFF5D40061CC1D /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59482ACFF5D40061CC1D /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		2E6A59312ACFEA0D0061CC1D /* _GQuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _GQuizAppUITests.swift; sourceTree = "<group>"; };
 		2E6A59332ACFEA0D0061CC1D /* _GQuizAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _GQuizAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2E6A59432ACFF5470061CC1D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		2E6A59452ACFF5C30061CC1D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2E6A59482ACFF5D40061CC1D /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 		2E6A59402ACFF5250061CC1D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A59472ACFF5C70061CC1D /* APIConstants */,
 				2E6A59422ACFF5320061CC1D /* NetworkManager */,
 				2E6A59412ACFF52E0061CC1D /* Error */,
 			);
@@ -150,8 +155,17 @@
 		2E6A59422ACFF5320061CC1D /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A59452ACFF5C30061CC1D /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		2E6A59472ACFF5C70061CC1D /* APIConstants */ = {
+			isa = PBXGroup;
+			children = (
+				2E6A59482ACFF5D40061CC1D /* APIConstants.swift */,
+			);
+			path = APIConstants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E6A59462ACFF5C30061CC1D /* NetworkManager.swift in Sources */,
+				2E6A59492ACFF5D40061CC1D /* APIConstants.swift in Sources */,
 				2E6A59192ACFEA0B0061CC1D /* ContentView.swift in Sources */,
 				2E6A59172ACFEA0B0061CC1D /* _GQuizAppApp.swift in Sources */,
 				2E6A59442ACFF5470061CC1D /* APIError.swift in Sources */,
