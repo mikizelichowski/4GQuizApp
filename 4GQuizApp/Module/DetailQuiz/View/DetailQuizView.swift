@@ -93,7 +93,13 @@ struct DetailQuizView: View {
             .environment(\.colorScheme, .dark)
             .fullScreenCover(isPresented: $showScoreCardView) {
                 let percent = CGFloat(viewModel.score) / CGFloat(quiz.questions.count) * 100
-                // add score view
+                ScoreCardView(scoreMessage: viewModel.setMessage(rates: quiz.rates, score: percent)
+                              ,score: percent, repeatQuiz: $startQuizAgain) {
+                    /// Closing view
+                    withAnimation {
+                        dismissView()
+                    }
+                }
             }
             .fullScreenCover(isPresented: $showPopupInfo, content: {
                 ZStack {
