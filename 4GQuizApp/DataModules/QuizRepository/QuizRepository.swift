@@ -9,9 +9,11 @@ import Foundation
 
 final class QuizRepository: QuizRepositoryProtocol {
     private let apiService: QuizApiRepositoryProtocol
+    private var cache: QuizCacheRepositoryProtocol
     
-    init(apiService: QuizApiRepositoryProtocol) {
+    init(apiService: QuizApiRepositoryProtocol, cache: QuizCacheRepositoryProtocol) {
         self.apiService = apiService
+        self.cache = cache
     }
     
     func getQuizList() async -> Result<Results, APIError> {

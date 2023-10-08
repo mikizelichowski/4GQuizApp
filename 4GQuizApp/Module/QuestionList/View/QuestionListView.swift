@@ -23,7 +23,7 @@ struct QuestionListView: View {
                     .rotationEffect(Angle.degrees(animate ? 720 : 0))
                 
                 ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(viewModel.questions, id: \.id) { value in
+                    ForEach(viewModel.isCacheIsEmpty ? viewModel.questions : viewModel.questionsFromCache, id: \.id) { value in
                         QuizCardView(quiz: value)
                             .frame(height: 340)
                             .frame(maxWidth: .infinity)
@@ -44,12 +44,11 @@ struct QuestionListView: View {
                 self.animate.toggle()
                 viewModel.loadedData()
             }
-            
         }
         .fullScreenCover(isPresented: $isPresentDetailView, content: {
             ZStack {
                 Color.lightBlueGreyThree.ignoresSafeArea()
-                if let quiz = viewModel.quizDetail {
+                if let quiz = viewModel.quizDetailFromCache {
                     DetailQuizView(quiz: quiz)
                 }
             }

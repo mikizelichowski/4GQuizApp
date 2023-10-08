@@ -45,6 +45,10 @@
 		2E6A599B2AD06A3B0061CC1D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A599A2AD06A3B0061CC1D /* ProgressBar.swift */; };
 		2E6A599F2AD06BD00061CC1D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A599E2AD06BD00061CC1D /* InfoView.swift */; };
 		2E6A59A32AD070AC0061CC1D /* ScoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59A22AD070AC0061CC1D /* ScoreCardView.swift */; };
+		2EF261D32AD2FCB100439BE1 /* AppCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261D22AD2FCB100439BE1 /* AppCache.swift */; };
+		2EF261D62AD2FCD300439BE1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261D52AD2FCD300439BE1 /* CacheKey.swift */; };
+		2EF261D92AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261D82AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift */; };
+		2EF261DB2AD3007700439BE1 /* QuizCacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261DA2AD3007700439BE1 /* QuizCacheRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,10 @@
 		2E6A599A2AD06A3B0061CC1D /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		2E6A599E2AD06BD00061CC1D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		2E6A59A22AD070AC0061CC1D /* ScoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardView.swift; sourceTree = "<group>"; };
+		2EF261D22AD2FCB100439BE1 /* AppCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCache.swift; sourceTree = "<group>"; };
+		2EF261D52AD2FCD300439BE1 /* CacheKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKey.swift; sourceTree = "<group>"; };
+		2EF261D82AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCacheRepositoryProtocol.swift; sourceTree = "<group>"; };
+		2EF261DA2AD3007700439BE1 /* QuizCacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCacheRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +250,7 @@
 		2E6A594F2AD00BD90061CC1D /* DataModules */ = {
 			isa = PBXGroup;
 			children = (
+				2EF261D12AD2FCA400439BE1 /* AppCache */,
 				2E6A59502AD00BE10061CC1D /* QuizRepository */,
 			);
 			path = DataModules;
@@ -250,6 +259,7 @@
 		2E6A59502AD00BE10061CC1D /* QuizRepository */ = {
 			isa = PBXGroup;
 			children = (
+				2EF261D72AD2FF4A00439BE1 /* QuizCacheRepository */,
 				2E6A59512AD00BEB0061CC1D /* API */,
 				2E6A59562AD00E9F0061CC1D /* QuizRepositoryProtocol.swift */,
 				2E6A59582AD00EA60061CC1D /* QuizRepository.swift */,
@@ -476,6 +486,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2EF261D12AD2FCA400439BE1 /* AppCache */ = {
+			isa = PBXGroup;
+			children = (
+				2EF261D42AD2FCCA00439BE1 /* CacheKey */,
+				2EF261D22AD2FCB100439BE1 /* AppCache.swift */,
+			);
+			path = AppCache;
+			sourceTree = "<group>";
+		};
+		2EF261D42AD2FCCA00439BE1 /* CacheKey */ = {
+			isa = PBXGroup;
+			children = (
+				2EF261D52AD2FCD300439BE1 /* CacheKey.swift */,
+			);
+			path = CacheKey;
+			sourceTree = "<group>";
+		};
+		2EF261D72AD2FF4A00439BE1 /* QuizCacheRepository */ = {
+			isa = PBXGroup;
+			children = (
+				2EF261D82AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift */,
+				2EF261DA2AD3007700439BE1 /* QuizCacheRepository.swift */,
+			);
+			path = QuizCacheRepository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -616,6 +652,7 @@
 				2E6A59652AD014970061CC1D /* RoundedButtonReusable.swift in Sources */,
 				2E6A59722AD0182C0061CC1D /* Text+Extension.swift in Sources */,
 				2E6A59572AD00EA00061CC1D /* QuizRepositoryProtocol.swift in Sources */,
+				2EF261D62AD2FCD300439BE1 /* CacheKey.swift in Sources */,
 				2E6A59492ACFF5D40061CC1D /* APIConstants.swift in Sources */,
 				2E6A59822AD01EED0061CC1D /* QuestionListViewModel.swift in Sources */,
 				2E6A59922AD05AB90061CC1D /* DetailQuizView.swift in Sources */,
@@ -624,15 +661,18 @@
 				2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */,
 				2E6A594C2AD00A420061CC1D /* Quiz.swift in Sources */,
 				2E6A599F2AD06BD00061CC1D /* InfoView.swift in Sources */,
+				2EF261D32AD2FCB100439BE1 /* AppCache.swift in Sources */,
 				2E6A597E2AD01E300061CC1D /* String+Extension.swift in Sources */,
 				2E6A59692AD015210061CC1D /* View+Extension.swift in Sources */,
 				2E6A59552AD00C1C0061CC1D /* QuizApiRepository.swift in Sources */,
 				2E6A59902AD05A950061CC1D /* DetailQuizViewModel.swift in Sources */,
+				2EF261DB2AD3007700439BE1 /* QuizCacheRepository.swift in Sources */,
 				2E6A59622AD013BA0061CC1D /* WelcomeView.swift in Sources */,
 				2E6A59802AD01EC20061CC1D /* QuestionListView.swift in Sources */,
 				2E6A599B2AD06A3B0061CC1D /* ProgressBar.swift in Sources */,
 				2E6A595C2AD0101A0061CC1D /* DIProvider.swift in Sources */,
 				2E6A59192ACFEA0B0061CC1D /* ContentView.swift in Sources */,
+				2EF261D92AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift in Sources */,
 				2E6A59172ACFEA0B0061CC1D /* _GQuizAppApp.swift in Sources */,
 				2E6A59772AD019BE0061CC1D /* CacheManager.swift in Sources */,
 				2E6A59982AD06A130061CC1D /* ReusableButton.swift in Sources */,
