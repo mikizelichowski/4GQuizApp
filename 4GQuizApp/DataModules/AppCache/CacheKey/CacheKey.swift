@@ -9,6 +9,7 @@ import Foundation
 
 enum CacheKey: String {
     case quizzes = "quizzes"
-    case quizDetail = "quizDetail"
-    case quizId = "quizId"
+    case quizDetail = "quiz_detail"
+    case quizId = "quiz_id"
+    case lastQuiz = "last_quiz"
 }

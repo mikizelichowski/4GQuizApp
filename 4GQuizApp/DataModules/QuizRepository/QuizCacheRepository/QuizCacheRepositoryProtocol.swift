@@ -17,4 +17,8 @@ protocol QuizCacheRepositoryProtocol: AnyObject {
     /// Quiz detail
     func saveQuizDetail(key: CacheKey, value: QuizDetailModel) -> AnyPublisher<Bool, CacheError>
     func getQuizDetail(key: CacheKey) -> AnyPublisher<QuizDetailModel, CacheError>
+    
+    /// Last quiz
+    func saveCurrentQuiz(key: CacheKey, value: LastQuiz) -> AnyPublisher<Bool, CacheError>
+    func getCurrentStateQuiz(key: CacheKey) -> AnyPublisher<LastQuiz, CacheError>
 }

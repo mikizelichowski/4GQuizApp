@@ -9,15 +9,14 @@ import SwiftUI
 
 extension Text {
     func headerTitle() -> some View {
-        self.font(.system(size: 24, weight: .bold))
-            .fontWeight(.medium)
-            .foregroundColor(.royal)
+        self.font(.system(size: 14, weight: .bold))
+            .foregroundColor(.white)
     }
     
     func subTitle() -> some View {
         self.font(.system(size: 18, weight: .regular))
             .fontWeight(.medium)
-            .foregroundColor(.royal)
+            .foregroundColor(.white)
     }
     
     func headerDetailTitle() -> some View {

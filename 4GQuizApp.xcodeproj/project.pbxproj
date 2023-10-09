@@ -49,6 +49,8 @@
 		2EF261D62AD2FCD300439BE1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261D52AD2FCD300439BE1 /* CacheKey.swift */; };
 		2EF261D92AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261D82AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift */; };
 		2EF261DB2AD3007700439BE1 /* QuizCacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261DA2AD3007700439BE1 /* QuizCacheRepository.swift */; };
+		2EF261DE2AD4051F00439BE1 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261DD2AD4051F00439BE1 /* CustomAlert.swift */; };
+		2EF261E02AD41D0200439BE1 /* LastQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261DF2AD41D0200439BE1 /* LastQuiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		2EF261D52AD2FCD300439BE1 /* CacheKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKey.swift; sourceTree = "<group>"; };
 		2EF261D82AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCacheRepositoryProtocol.swift; sourceTree = "<group>"; };
 		2EF261DA2AD3007700439BE1 /* QuizCacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCacheRepository.swift; sourceTree = "<group>"; };
+		2EF261DD2AD4051F00439BE1 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		2EF261DF2AD41D0200439BE1 /* LastQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastQuiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +247,7 @@
 			children = (
 				2E6A594B2AD00A420061CC1D /* Quiz.swift */,
 				2E6A594D2AD00A4E0061CC1D /* QuizDetailModel.swift */,
+				2EF261DF2AD41D0200439BE1 /* LastQuiz.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 		2E6A595E2AD013640061CC1D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2EF261DC2AD4051700439BE1 /* CustomAlert */,
 				2E6A59992AD06A360061CC1D /* ProgressBar */,
 				2E6A59962AD06A0D0061CC1D /* ReusableButton */,
 				2E6A59932AD069D10061CC1D /* CustomHeader */,
@@ -512,6 +518,14 @@
 			path = QuizCacheRepository;
 			sourceTree = "<group>";
 		};
+		2EF261DC2AD4051700439BE1 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				2EF261DD2AD4051F00439BE1 /* CustomAlert.swift */,
+			);
+			path = CustomAlert;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -649,6 +663,7 @@
 				2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */,
 				2E6A59A32AD070AC0061CC1D /* ScoreCardView.swift in Sources */,
 				2E6A597A2AD01A010061CC1D /* CustomImageHelper.swift in Sources */,
+				2EF261E02AD41D0200439BE1 /* LastQuiz.swift in Sources */,
 				2E6A59652AD014970061CC1D /* RoundedButtonReusable.swift in Sources */,
 				2E6A59722AD0182C0061CC1D /* Text+Extension.swift in Sources */,
 				2E6A59572AD00EA00061CC1D /* QuizRepositoryProtocol.swift in Sources */,
@@ -667,6 +682,7 @@
 				2E6A59552AD00C1C0061CC1D /* QuizApiRepository.swift in Sources */,
 				2E6A59902AD05A950061CC1D /* DetailQuizViewModel.swift in Sources */,
 				2EF261DB2AD3007700439BE1 /* QuizCacheRepository.swift in Sources */,
+				2EF261DE2AD4051F00439BE1 /* CustomAlert.swift in Sources */,
 				2E6A59622AD013BA0061CC1D /* WelcomeView.swift in Sources */,
 				2E6A59802AD01EC20061CC1D /* QuestionListView.swift in Sources */,
 				2E6A599B2AD06A3B0061CC1D /* ProgressBar.swift in Sources */,

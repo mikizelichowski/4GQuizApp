@@ -7,11 +7,13 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 final class DetailQuizViewModel: ObservableObject {
+    private var bag = Set<AnyCancellable>()
     @Published var answer: AnswerElement?
     @Published var isSelectedAnswer: String = ""
-    @Published private(set) var score: Int = 0
+    @Published var score: Int = 0
     @Published var currentIndex: Int = 0
     @Published var progressBarValue: CGFloat = 0.0
     
@@ -43,5 +45,21 @@ final class DetailQuizViewModel: ObservableObject {
         }
         return message
     }
+    
+    func saveCurrentQuizToCache(value: LastQuiz) {
+        DIProvider.quizCacheRepository.saveCurrentQuiz(key: .lastQuiz, value: value)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("DEBUG: SAVE_CURRENT_QUIZ_TO_CACHE 🔥")
+                case .failure(let cacheError):
+                    switch cacheError {
+                    case .failedToSave:
+                        print("DEBUG: Failed SAVE_CURRENT_QUIZ_TO_CACHE")
+                    case .failedToRetrieve(let error):
+                        print("DEBUG: Failed to retrieve  \(String(describing: error))")
+                    }
+                }
+            }, receiveValue: { _ in }).store(in: &bag)
+    }
 }
-

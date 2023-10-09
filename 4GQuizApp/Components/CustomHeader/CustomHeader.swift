@@ -16,11 +16,11 @@ struct CustomHeader: View {
             Button {
                 actionTapped()
             } label: {
-                Image(systemName: "chevron.left")
+                Image(systemName: "chevron.left").tint(.white)
             }
             Spacer()
             Text(title)
-                .headerDetailTitle()
+                .headerTitle()
             Spacer()
         }
     }

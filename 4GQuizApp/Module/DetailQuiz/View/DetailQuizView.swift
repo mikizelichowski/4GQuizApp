@@ -15,16 +15,22 @@ struct DetailQuizView: View {
     @State private var startQuizAgain: Bool = false
     
     var quiz: QuizDetailModel
+    var lastIndex: Int
+    var lastScore: Int
     
     var body: some View {
         NavigationView {
             ZStack {
-                Color.lightBlueGreyThree
-                    .ignoresSafeArea()
+                LinearGradient(colors: [.purple.opacity(0.7), .blue.opacity(0.9)],
+                               startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea()
                 
                 VStack(alignment: .center) {
                     /// Header
-                    CustomHeader(title: quiz.title, actionTapped:{ dismissView()})
+                    CustomHeader(title: quiz.title, actionTapped:{
+                        dismissView()
+                        // Add here custom popup with ask clean data or not clean
+                    })
                     ///Progress Bar
                     ProgressBar(progress: viewModel.progressBarValue)
                     
@@ -32,9 +38,16 @@ struct DetailQuizView: View {
                         VStack(spacing: 16) {
                             VStack(alignment: .leading) {
                                 HStack {
-                                Text("Wynik: \(viewModel.score)")
+                                    Text("Wynik: \(viewModel.score)")
                                         .subTitle()
-                                   Spacer()
+                                    Spacer()
+                                    
+                                    Image("4G")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .ignoresSafeArea()
+                                        .frame(width: 20, height: 20)
+                                    Spacer()
                                     
                                     Button {
                                         withAnimation {
@@ -47,16 +60,21 @@ struct DetailQuizView: View {
                                     .padding(5)
                                     .background {
                                         RoundedRectangle(cornerRadius: 12)
-                                            .fill(Color.royal.opacity(0.3))
+                                            .fill(Color.purple)
                                     }
                                 }
+                                .padding(.top)
                                 
                                 GeometryReader {_ in
                                     ForEach(quiz.questions.indices, id:\.self) { index in
-                                        if viewModel.currentIndex == index {
+                                        if self.viewModel.currentIndex == index {
                                             QuestionView(quiz.questions[viewModel.currentIndex])
                                                 .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
                                         }
+                                    }
+                                    .onAppear {
+                                        self.viewModel.currentIndex = lastIndex
+                                        self.viewModel.score = lastScore
                                     }
                                 }
                                 .padding(.horizontal,-15)
@@ -79,23 +97,27 @@ struct DetailQuizView: View {
                         self.showScoreCardView.toggle()
                     } else {
                         withAnimation(.easeInOut){
-                            viewModel.currentIndex += 1
+                            self.viewModel.currentIndex += 1
                             /// Set value on progress bar
                             viewModel.progressBarValue =  CGFloat(viewModel.currentIndex) / CGFloat(quiz.questions.count - 1) * 350
                             /// Add point if answer is correct
                             self.viewModel.addScoreResult(answer: viewModel.answer)
+                            /// Save to cache
+                            self.viewModel.saveCurrentQuizToCache(value: LastQuiz(points: viewModel.score,
+                                                                                  isCompleted: viewModel.currentIndex == (quiz.questions.count - 1),
+                                                                                  order: viewModel.currentIndex,
+                                                                                  quiz: quiz))
                         }
                     }
                 }
-                .disabled(viewModel.isSelectedAnswer != "" ? false : true)
-                .vBottom()
+                               .disabled(viewModel.isSelectedAnswer != "" ? false : true)
+                               .vBottom()
             }
             .environment(\.colorScheme, .dark)
             .fullScreenCover(isPresented: $showScoreCardView) {
                 let percent = CGFloat(viewModel.score) / CGFloat(quiz.questions.count) * 100
                 ScoreCardView(scoreMessage: viewModel.setMessage(rates: quiz.rates, score: percent)
                               ,score: percent, repeatQuiz: $startQuizAgain) {
-                    /// Closing view
                     withAnimation {
                         dismissView()
                     }
@@ -103,8 +125,6 @@ struct DetailQuizView: View {
             }
             .fullScreenCover(isPresented: $showPopupInfo, content: {
                 ZStack {
-                    Color.aquaMarine
-                        .opacity(0.3)
                     InfoView(title: quiz.title,
                              description: quiz.content) {
                         withAnimation {
@@ -125,11 +145,11 @@ struct DetailQuizView: View {
                 CustomImageHelper(imagekey: ImageHelper.shared.getPath(width: Int(question.image.width ?? "") ?? 0,
                                                                        height: Int(question.image.height ?? "") ?? 0,
                                                                        urlName: question.image.url))
-                    .frame(height: 200)
-                    .cornerRadius(12, corners: .allCorners)
+                .frame(height: 200)
+                .cornerRadius(12, corners: .allCorners)
             }
             
-            Text("Pytania: \(viewModel.currentIndex + 1)/\(quiz.questions.count)")
+            Text("Pytania: \((viewModel.currentIndex) + 1)/\(quiz.questions.count)")
                 .font(.callout)
                 .foregroundColor(.gray)
                 .hLeading()

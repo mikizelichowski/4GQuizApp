@@ -38,4 +38,13 @@ final class QuizCacheRepository: QuizCacheRepositoryProtocol {
     func getQuizDetail(key: CacheKey) -> AnyPublisher<QuizDetailModel, CacheError> {
         self.cache.getObject(key: key)
     }
+    
+    /// Last quiz
+    func saveCurrentQuiz(key: CacheKey, value: LastQuiz) -> AnyPublisher<Bool, CacheError> {
+        self.cache.saveObject(key: key, value: value)
+    }
+    
+    func getCurrentStateQuiz(key: CacheKey) -> AnyPublisher<LastQuiz, CacheError> {
+        self.cache.getObject(key: key)
+    }
 }
