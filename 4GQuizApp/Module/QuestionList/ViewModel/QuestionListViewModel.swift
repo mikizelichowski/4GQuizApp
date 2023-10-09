@@ -40,11 +40,10 @@ final class QuestionListViewModel: ObservableObject {
         self.loadedData()
         self.getCurrentQuizzesFromCache()
         self.getQuizDetailFromCache()
-        
-        setupQuiz()
+        self.checkCurrentQuizState()
     }
     
-    func setupQuiz() {
+    private func checkCurrentQuizState() {
         if currentQuiz?.isCompleted != nil {
             isShowAlertQuiz.toggle()
         }
