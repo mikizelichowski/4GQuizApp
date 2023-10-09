@@ -8,19 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var internetManager = InternetManager()
+    @State private var presentMainView: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        Group {
+            if internetManager.isConnected {
+                ZStack {
+                    ZStack {
+                        WelcomeView(presentNextView: $presentMainView)
+                            .hCenter()
+                    }
+                    .ignoresSafeArea()
+                }
+                .fullScreenCover(isPresented: $presentMainView) {
+                    ZStack {
+                        Color.softBlue
+                            .ignoresSafeArea()
+                        QuestionListView()
+                    }
+                }
+            } else {
+                InternetView(internetManager: internetManager)
+            }
         }
-        .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
