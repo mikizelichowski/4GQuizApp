@@ -51,6 +51,8 @@
 		2EF261DB2AD3007700439BE1 /* QuizCacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261DA2AD3007700439BE1 /* QuizCacheRepository.swift */; };
 		2EF261DE2AD4051F00439BE1 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261DD2AD4051F00439BE1 /* CustomAlert.swift */; };
 		2EF261E02AD41D0200439BE1 /* LastQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261DF2AD41D0200439BE1 /* LastQuiz.swift */; };
+		2EF261E32AD4472F00439BE1 /* InternetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261E22AD4472F00439BE1 /* InternetManager.swift */; };
+		2EF261E62AD4476800439BE1 /* InternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261E52AD4476800439BE1 /* InternetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,8 @@
 		2EF261DA2AD3007700439BE1 /* QuizCacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCacheRepository.swift; sourceTree = "<group>"; };
 		2EF261DD2AD4051F00439BE1 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		2EF261DF2AD41D0200439BE1 /* LastQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastQuiz.swift; sourceTree = "<group>"; };
+		2EF261E22AD4472F00439BE1 /* InternetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetManager.swift; sourceTree = "<group>"; };
+		2EF261E52AD4476800439BE1 /* InternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,7 @@
 		2E6A59402ACFF5250061CC1D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2EF261E12AD4471F00439BE1 /* InternetManager */,
 				2E6A59472ACFF5C70061CC1D /* APIConstants */,
 				2E6A59422ACFF5320061CC1D /* NetworkManager */,
 				2E6A59412ACFF52E0061CC1D /* Error */,
@@ -292,6 +297,7 @@
 		2E6A595D2AD013610061CC1D /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				2EF261E42AD4475900439BE1 /* InternetView */,
 				2E6A59A02AD070A30061CC1D /* ScoreCardView */,
 				2E6A599C2AD06BBF0061CC1D /* InfoView */,
 				2E6A598C2AD05A5B0061CC1D /* DetailQuiz */,
@@ -526,6 +532,22 @@
 			path = CustomAlert;
 			sourceTree = "<group>";
 		};
+		2EF261E12AD4471F00439BE1 /* InternetManager */ = {
+			isa = PBXGroup;
+			children = (
+				2EF261E22AD4472F00439BE1 /* InternetManager.swift */,
+			);
+			path = InternetManager;
+			sourceTree = "<group>";
+		};
+		2EF261E42AD4475900439BE1 /* InternetView */ = {
+			isa = PBXGroup;
+			children = (
+				2EF261E52AD4476800439BE1 /* InternetView.swift */,
+			);
+			path = InternetView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -660,6 +682,7 @@
 				2E6A59702AD017C30061CC1D /* QuizCardView.swift in Sources */,
 				2E6A59952AD069D70061CC1D /* CustomHeader.swift in Sources */,
 				2E6A597C2AD01A3C0061CC1D /* ViewStates.swift in Sources */,
+				2EF261E62AD4476800439BE1 /* InternetView.swift in Sources */,
 				2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */,
 				2E6A59A32AD070AC0061CC1D /* ScoreCardView.swift in Sources */,
 				2E6A597A2AD01A010061CC1D /* CustomImageHelper.swift in Sources */,
@@ -684,6 +707,7 @@
 				2EF261DB2AD3007700439BE1 /* QuizCacheRepository.swift in Sources */,
 				2EF261DE2AD4051F00439BE1 /* CustomAlert.swift in Sources */,
 				2E6A59622AD013BA0061CC1D /* WelcomeView.swift in Sources */,
+				2EF261E32AD4472F00439BE1 /* InternetManager.swift in Sources */,
 				2E6A59802AD01EC20061CC1D /* QuestionListView.swift in Sources */,
 				2E6A599B2AD06A3B0061CC1D /* ProgressBar.swift in Sources */,
 				2E6A595C2AD0101A0061CC1D /* DIProvider.swift in Sources */,
