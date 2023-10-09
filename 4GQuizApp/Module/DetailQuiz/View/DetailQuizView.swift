@@ -13,10 +13,12 @@ struct DetailQuizView: View {
     @State private var showScoreCardView: Bool = false
     @State private var showPopupInfo: Bool = false
     @State private var startQuizAgain: Bool = false
+    @State private var presentCloseAlert: Bool = false
     
     var quiz: QuizDetailModel
     var lastIndex: Int
     var lastScore: Int
+    @Binding var isContinueLastQuiz: Bool
     
     var body: some View {
         NavigationView {
@@ -27,10 +29,7 @@ struct DetailQuizView: View {
                 
                 VStack(alignment: .center) {
                     /// Header
-                    CustomHeader(title: quiz.title, actionTapped:{
-                        dismissView()
-                        // Add here custom popup with ask clean data or not clean
-                    })
+                    CustomHeader(title: quiz.title, actionTapped: { self.presentCloseAlert.toggle() })
                     ///Progress Bar
                     ProgressBar(progress: viewModel.progressBarValue)
                     
@@ -112,6 +111,21 @@ struct DetailQuizView: View {
                 }
                                .disabled(viewModel.isSelectedAnswer != "" ? false : true)
                                .vBottom()
+            }
+            .fullScreenCover(isPresented: $presentCloseAlert) {
+                ZStack {
+                    LinearGradient(colors: [.purple.opacity(0.7), .blue.opacity(0.9)],
+                                   startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .ignoresSafeArea()
+                    
+                    CustomAlert(title: "Czy jesteś pewny, że chcesz zakończyć quiz?", titleLeftButton: "Tak", titleRightButton: "Nie", actionLeftButton: {
+                        self.dismissView()
+                        self.isContinueLastQuiz = false
+                        self.viewModel.cleanCurrentQuizFromCache()
+                    }, actionRightButton: {
+                        presentCloseAlert.toggle()
+                    })
+                }
             }
             .environment(\.colorScheme, .dark)
             .fullScreenCover(isPresented: $showScoreCardView) {

@@ -32,6 +32,7 @@ final class QuestionListViewModel: ObservableObject {
     @Published private var cacheRepository = DIProvider.quizCacheRepository
     @Published private var quizRepository = DIProvider.quizRepository
     
+    var curentState = CurrentValueSubject<Bool, Never>(false)
     
     init() {
         self.checkIfCurrentQuizIsPending()

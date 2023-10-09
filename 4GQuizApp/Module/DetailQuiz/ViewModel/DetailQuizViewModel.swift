@@ -16,6 +16,7 @@ final class DetailQuizViewModel: ObservableObject {
     @Published var score: Int = 0
     @Published var currentIndex: Int = 0
     @Published var progressBarValue: CGFloat = 0.0
+    @Published private var cacheRepository = DIProvider.quizCacheRepository
     
     func addScoreResult(answer: AnswerElement?) {
         if answer?.text == isSelectedAnswer {
@@ -47,7 +48,7 @@ final class DetailQuizViewModel: ObservableObject {
     }
     
     func saveCurrentQuizToCache(value: LastQuiz) {
-        DIProvider.quizCacheRepository.saveCurrentQuiz(key: .lastQuiz, value: value)
+        cacheRepository.saveCurrentQuiz(key: .lastQuiz, value: value)
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .finished:
@@ -61,5 +62,9 @@ final class DetailQuizViewModel: ObservableObject {
                     }
                 }
             }, receiveValue: { _ in }).store(in: &bag)
+    }
+    
+    func cleanCurrentQuizFromCache() {
+        cacheRepository.clearCache(key: .lastQuiz)
     }
 }

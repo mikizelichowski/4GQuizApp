@@ -10,7 +10,7 @@ import SwiftUI
 struct QuestionListView: View {
     @StateObject private var viewModel = QuestionListViewModel()
     @State private var animate = false
-
+    
     var body: some View {
         ZStack {
             Color.black
@@ -41,7 +41,7 @@ struct QuestionListView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding(.horizontal)
                     .padding(.vertical)
-                } }
+                }}
         }
         .refreshable {
             withAnimation {
@@ -57,14 +57,16 @@ struct QuestionListView: View {
                        let lastQuiz = viewModel.currentQuiz {
                         DetailQuizView(quiz: viewModel.isContinueLastQuiz ? lastQuiz.quiz : quiz,
                                        lastIndex: viewModel.isContinueLastQuiz ? lastQuiz.order : 0,
-                                       lastScore: viewModel.isContinueLastQuiz ? lastQuiz.points : 0)
+                                       lastScore: viewModel.isContinueLastQuiz ? lastQuiz.points : 0,
+                                       isContinueLastQuiz: $viewModel.isContinueLastQuiz)
                     }
                 }
                 else {
                     if let quiz = viewModel.quizDetailFromCache {
                         DetailQuizView(quiz: quiz,
                                        lastIndex: 0,
-                                       lastScore: 0)
+                                       lastScore: 0,
+                                       isContinueLastQuiz: $viewModel.isContinueLastQuiz)
                     }
                 }
             }
