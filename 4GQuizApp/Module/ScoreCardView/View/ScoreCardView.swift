@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ScoreCardView: View {
+    @StateObject private var viewModel = ScoreCardViewModel()
     @Environment(\.dismiss) private var dismissView
+    @Binding var isPresentPopupResult: Bool
     var scoreMessage: String
     var score: CGFloat
     var onTappedrepeatQuiz: () -> ()
     var onTappedDismiss: () -> ()
+    @State private var presentUsersList: Bool = false
     
     var body: some View {
         VStack{
@@ -67,9 +70,23 @@ struct ScoreCardView: View {
                 }
                 .padding(.vertical, 20)
                 .padding(.horizontal, 20)
+                
+                Button(action: {
+                    self.presentUsersList.toggle()
+                }, label: {
+                    Text("Pokaż listę użytkowników")
+                        .foregroundColor(.white)
+                        .font(.system(size: 14.0, weight: .bold))
+                })
             }
             .padding(.bottom, 20)
         }
+        .fullScreenCover(isPresented: $presentUsersList, content: {
+            UserListView(viewModel: viewModel, presentUsersList: $presentUsersList)
+        })
+        .fullScreenCover(isPresented: $isPresentPopupResult, content: {
+            AddResultUserView(viewModel: viewModel, isPresentPopupResult: $isPresentPopupResult, score: score)
+        })
         .padding(.top)
         .background {
             Color.royal
@@ -80,6 +97,6 @@ struct ScoreCardView: View {
 
 struct ScoreCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreCardView(scoreMessage: "", score: 3, onTappedrepeatQuiz: {}, onTappedDismiss: {})
+        ScoreCardView(isPresentPopupResult: .constant(false), scoreMessage: "", score: 3, onTappedrepeatQuiz: {}, onTappedDismiss: {})
     }
 }

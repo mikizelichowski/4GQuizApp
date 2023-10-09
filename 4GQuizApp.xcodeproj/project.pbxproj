@@ -45,6 +45,10 @@
 		2E6A599B2AD06A3B0061CC1D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A599A2AD06A3B0061CC1D /* ProgressBar.swift */; };
 		2E6A599F2AD06BD00061CC1D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A599E2AD06BD00061CC1D /* InfoView.swift */; };
 		2E6A59A32AD070AC0061CC1D /* ScoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A59A22AD070AC0061CC1D /* ScoreCardView.swift */; };
+		2EE7A4322AD474AE00448191 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7A4312AD474AE00448191 /* User.swift */; };
+		2EE7A4352AD47B4500448191 /* ScoreCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7A4342AD47B4500448191 /* ScoreCardViewModel.swift */; };
+		2EE7A4372AD47CE000448191 /* AddResultUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7A4362AD47CE000448191 /* AddResultUserView.swift */; };
+		2EE7A4392AD47D0300448191 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7A4382AD47D0300448191 /* UserListView.swift */; };
 		2EF261D32AD2FCB100439BE1 /* AppCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261D22AD2FCB100439BE1 /* AppCache.swift */; };
 		2EF261D62AD2FCD300439BE1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261D52AD2FCD300439BE1 /* CacheKey.swift */; };
 		2EF261D92AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261D82AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift */; };
@@ -56,6 +60,9 @@
 		2EF261EA2AD4503A00439BE1 /* ListQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261E92AD4503A00439BE1 /* ListQuizView.swift */; };
 		2EF261EC2AD4564600439BE1 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261EB2AD4564600439BE1 /* QuestionView.swift */; };
 		2EF261EE2AD4569B00439BE1 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261ED2AD4569B00439BE1 /* AnswerView.swift */; };
+		2EF261F12AD45B3B00439BE1 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2EF261F02AD45B3B00439BE1 /* Realm */; };
+		2EF261F32AD45B3B00439BE1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2EF261F22AD45B3B00439BE1 /* RealmSwift */; };
+		2EF261F82AD45B7100439BE1 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261F72AD45B7100439BE1 /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +124,10 @@
 		2E6A599A2AD06A3B0061CC1D /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		2E6A599E2AD06BD00061CC1D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		2E6A59A22AD070AC0061CC1D /* ScoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardView.swift; sourceTree = "<group>"; };
+		2EE7A4312AD474AE00448191 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2EE7A4342AD47B4500448191 /* ScoreCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardViewModel.swift; sourceTree = "<group>"; };
+		2EE7A4362AD47CE000448191 /* AddResultUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddResultUserView.swift; sourceTree = "<group>"; };
+		2EE7A4382AD47D0300448191 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		2EF261D22AD2FCB100439BE1 /* AppCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCache.swift; sourceTree = "<group>"; };
 		2EF261D52AD2FCD300439BE1 /* CacheKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKey.swift; sourceTree = "<group>"; };
 		2EF261D82AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCacheRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -128,6 +139,7 @@
 		2EF261E92AD4503A00439BE1 /* ListQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListQuizView.swift; sourceTree = "<group>"; };
 		2EF261EB2AD4564600439BE1 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		2EF261ED2AD4569B00439BE1 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		2EF261F72AD45B7100439BE1 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +147,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF261F32AD45B3B00439BE1 /* RealmSwift in Frameworks */,
+				2EF261F12AD45B3B00439BE1 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +192,7 @@
 		2E6A59152ACFEA0B0061CC1D /* 4GQuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				2EF261F42AD45B4600439BE1 /* Database */,
 				2E6A59662AD015090061CC1D /* Helper */,
 				2E6A595E2AD013640061CC1D /* Components */,
 				2E6A595D2AD013610061CC1D /* Module */,
@@ -494,6 +509,7 @@
 		2E6A59A02AD070A30061CC1D /* ScoreCardView */ = {
 			isa = PBXGroup;
 			children = (
+				2EE7A4332AD47B3200448191 /* ViewModel */,
 				2E6A59A12AD070A60061CC1D /* View */,
 			);
 			path = ScoreCardView;
@@ -503,8 +519,26 @@
 			isa = PBXGroup;
 			children = (
 				2E6A59A22AD070AC0061CC1D /* ScoreCardView.swift */,
+				2EE7A4362AD47CE000448191 /* AddResultUserView.swift */,
+				2EE7A4382AD47D0300448191 /* UserListView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2EE7A4302AD4749200448191 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2EE7A4312AD474AE00448191 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2EE7A4332AD47B3200448191 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EE7A4342AD47B4500448191 /* ScoreCardViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2EF261D12AD2FCA400439BE1 /* AppCache */ = {
@@ -557,6 +591,23 @@
 			path = InternetView;
 			sourceTree = "<group>";
 		};
+		2EF261F42AD45B4600439BE1 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				2EF261F62AD45B6300439BE1 /* RealmManager */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		2EF261F62AD45B6300439BE1 /* RealmManager */ = {
+			isa = PBXGroup;
+			children = (
+				2EE7A4302AD4749200448191 /* Model */,
+				2EF261F72AD45B7100439BE1 /* RealmManager.swift */,
+			);
+			path = RealmManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -573,6 +624,10 @@
 			dependencies = (
 			);
 			name = 4GQuizApp;
+			packageProductDependencies = (
+				2EF261F02AD45B3B00439BE1 /* Realm */,
+				2EF261F22AD45B3B00439BE1 /* RealmSwift */,
+			);
 			productName = 4GQuizApp;
 			productReference = 2E6A59132ACFEA0B0061CC1D /* 4GQuizApp.app */;
 			productType = "com.apple.product-type.application";
@@ -645,6 +700,9 @@
 				Base,
 			);
 			mainGroup = 2E6A590A2ACFEA0B0061CC1D;
+			packageReferences = (
+				2EF261EF2AD45B3B00439BE1 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 2E6A59142ACFEA0B0061CC1D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -691,6 +749,7 @@
 				2E6A59702AD017C30061CC1D /* QuizCardView.swift in Sources */,
 				2E6A59952AD069D70061CC1D /* CustomHeader.swift in Sources */,
 				2E6A597C2AD01A3C0061CC1D /* ViewStates.swift in Sources */,
+				2EE7A4372AD47CE000448191 /* AddResultUserView.swift in Sources */,
 				2EF261E62AD4476800439BE1 /* InternetView.swift in Sources */,
 				2EF261EC2AD4564600439BE1 /* QuestionView.swift in Sources */,
 				2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */,
@@ -709,6 +768,7 @@
 				2EF261EA2AD4503A00439BE1 /* ListQuizView.swift in Sources */,
 				2E6A59852AD020D90061CC1D /* ProgressBarView.swift in Sources */,
 				2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */,
+				2EE7A4322AD474AE00448191 /* User.swift in Sources */,
 				2E6A594C2AD00A420061CC1D /* Quiz.swift in Sources */,
 				2E6A599F2AD06BD00061CC1D /* InfoView.swift in Sources */,
 				2EF261D32AD2FCB100439BE1 /* AppCache.swift in Sources */,
@@ -716,15 +776,18 @@
 				2E6A59692AD015210061CC1D /* View+Extension.swift in Sources */,
 				2E6A59552AD00C1C0061CC1D /* QuizApiRepository.swift in Sources */,
 				2E6A59902AD05A950061CC1D /* DetailQuizViewModel.swift in Sources */,
+				2EE7A4352AD47B4500448191 /* ScoreCardViewModel.swift in Sources */,
 				2EF261DB2AD3007700439BE1 /* QuizCacheRepository.swift in Sources */,
 				2EF261DE2AD4051F00439BE1 /* CustomAlert.swift in Sources */,
 				2E6A59622AD013BA0061CC1D /* WelcomeView.swift in Sources */,
+				2EF261F82AD45B7100439BE1 /* RealmManager.swift in Sources */,
 				2EF261E32AD4472F00439BE1 /* InternetManager.swift in Sources */,
 				2E6A59802AD01EC20061CC1D /* QuestionListView.swift in Sources */,
 				2E6A599B2AD06A3B0061CC1D /* ProgressBar.swift in Sources */,
 				2E6A595C2AD0101A0061CC1D /* DIProvider.swift in Sources */,
 				2E6A59192ACFEA0B0061CC1D /* ContentView.swift in Sources */,
 				2EF261D92AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift in Sources */,
+				2EE7A4392AD47D0300448191 /* UserListView.swift in Sources */,
 				2E6A59172ACFEA0B0061CC1D /* _GQuizAppApp.swift in Sources */,
 				2E6A59772AD019BE0061CC1D /* CacheManager.swift in Sources */,
 				2E6A59982AD06A130061CC1D /* ReusableButton.swift in Sources */,
@@ -895,8 +958,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -925,8 +988,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1057,6 +1120,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2EF261EF2AD45B3B00439BE1 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2EF261F02AD45B3B00439BE1 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EF261EF2AD45B3B00439BE1 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		2EF261F22AD45B3B00439BE1 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EF261EF2AD45B3B00439BE1 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E6A590B2ACFEA0B0061CC1D /* Project object */;
 }

@@ -13,6 +13,7 @@ struct DetailQuizView: View {
     @State private var showScoreCardView: Bool = false
     @State private var showPopupInfo: Bool = false
     @State private var presentCloseAlert: Bool = false
+    @State private var presentScoreAlert: Bool = true
     
     var quiz: QuizDetailModel
     var lastIndex: Int
@@ -129,7 +130,8 @@ struct DetailQuizView: View {
             .environment(\.colorScheme, .dark)
             .fullScreenCover(isPresented: $showScoreCardView) {
                 let percent = CGFloat(viewModel.score) / CGFloat(quiz.questions.count) * 100
-                ScoreCardView(scoreMessage: viewModel.setMessage(rates: quiz.rates, score: percent)
+                ScoreCardView(isPresentPopupResult: $presentScoreAlert,
+                              scoreMessage: viewModel.setMessage(rates: quiz.rates, score: percent)
                               ,score: percent, onTappedrepeatQuiz: {
                     self.isContinueLastQuiz = false
                     self.viewModel.cleanCurrentQuizFromCache()
