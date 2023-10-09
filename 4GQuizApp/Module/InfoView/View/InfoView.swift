@@ -14,8 +14,10 @@ struct InfoView: View {
     
     var body: some View {
         ZStack {
-            Color.lightBlueGreyThree
-                .ignoresSafeArea()
+            LinearGradient(colors: [.purple.opacity(0.7), .blue.opacity(0.9)],
+                           startPoint: .topLeading, endPoint: .bottomTrailing)
+            .ignoresSafeArea()
+            
             VStack(alignment: .center, spacing: 10) {
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Tytuł:")

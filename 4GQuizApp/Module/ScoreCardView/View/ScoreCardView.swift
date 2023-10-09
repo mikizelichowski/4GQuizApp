@@ -11,7 +11,7 @@ struct ScoreCardView: View {
     @Environment(\.dismiss) private var dismissView
     var scoreMessage: String
     var score: CGFloat
-    @Binding var repeatQuiz: Bool
+    var onTappedrepeatQuiz: () -> ()
     var onTappedDismiss: () -> ()
     
     var body: some View {
@@ -52,8 +52,8 @@ struct ScoreCardView: View {
             VStack {
                 VStack(spacing: 10) {
                     ReusableButton(title: "Spróbuj jeszcze raz") {
+                        onTappedrepeatQuiz()
                         dismissView()
-                        repeatQuiz.toggle()
                     }
                     .padding(.vertical)
                     .padding(.horizontal, 20)
@@ -80,6 +80,6 @@ struct ScoreCardView: View {
 
 struct ScoreCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreCardView(scoreMessage: "", score: 3, repeatQuiz: .constant(false), onTappedDismiss: {})
+        ScoreCardView(scoreMessage: "", score: 3, onTappedrepeatQuiz: {}, onTappedDismiss: {})
     }
 }

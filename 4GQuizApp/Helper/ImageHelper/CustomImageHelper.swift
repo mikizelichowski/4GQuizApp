@@ -9,7 +9,7 @@ import SwiftUI
 
 class ImageHelperViewModel: ObservableObject {
     let manager = CacheManager.instance
-    private let networkManager = NetworkManager()
+    private let networkManager = NetworkManager(cache: Cache())
     
     let imageKey: String
     

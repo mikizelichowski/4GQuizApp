@@ -18,7 +18,11 @@ protocol NetworkManagerProtocol {
 }
 
 final class NetworkManager: NetworkManagerProtocol {
-    init() {}
+    var cache: CacheProtocol
+    
+    init(cache: CacheProtocol) {
+        self.cache = cache
+    }
     
     // MARK: Async Await option
     func sendRequest<T: Codable>(responseModel: T.Type, url: String) async -> Result<T, APIError> {

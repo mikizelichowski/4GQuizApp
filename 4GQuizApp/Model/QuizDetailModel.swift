@@ -8,7 +8,6 @@
 import Foundation
 
 struct QuizDetailModel: Codable {
-    let celebrity: Celebrity
     let opinions_enabled: Bool
     let rates: [Rate]
     let questions: [Question]
@@ -50,20 +49,6 @@ struct CategoryElement: Codable {
 struct CategoryModel: Codable {
     let id: Int
     let name: String
-}
-
-// MARK: - Celebrity
-struct Celebrity: Codable {
-    let result: String
-    let imageAuthor: String
-    let imageHeight: String
-    let imageUrl: String
-    let show: Int
-    let name: String
-    let imageTitle: String
-    let imageWidth: String
-    let content: String
-    let imageSource: String
 }
 
 // MARK: - LatestResult
