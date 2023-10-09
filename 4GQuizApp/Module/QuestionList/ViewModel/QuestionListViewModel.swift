@@ -18,6 +18,7 @@ final class QuestionListViewModel: ObservableObject {
     
     /// Progress loading
     @Published var isLoading: Bool = false
+    @Published var animate: Bool = false
     @Published var viewStates: ViewStates = ViewStates.ready
     @Published var isCacheIsEmpty: Bool = false
     @Published var currentQuiz: LastQuiz?
@@ -39,11 +40,10 @@ final class QuestionListViewModel: ObservableObject {
         self.loadedData()
         self.getCurrentQuizzesFromCache()
         self.getQuizDetailFromCache()
-        
-        setupQuiz()
+        self.checkCurrentQuizState()
     }
     
-    func setupQuiz() {
+    private func checkCurrentQuizState() {
         if currentQuiz?.isCompleted != nil {
             isShowAlertQuiz.toggle()
         }

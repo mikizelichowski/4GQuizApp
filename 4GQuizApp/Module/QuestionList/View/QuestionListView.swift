@@ -9,7 +9,6 @@ import SwiftUI
 
 struct QuestionListView: View {
     @StateObject private var viewModel = QuestionListViewModel()
-    @State private var animate = false
     
     var body: some View {
         ZStack {
@@ -19,33 +18,12 @@ struct QuestionListView: View {
             if viewModel.isShowAlertQuiz {
                 CustomAlert(title: "Czy chcesz dokończyć ostatni quiz?", titleLeftButton: "Nowy", titleRightButton: "Kontynuuj", actionLeftButton: { viewModel.setNewQuiz() }, actionRightButton: { viewModel.setLastQuiz() })
             } else {
-                VStack {
-                    Image("4G")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 30, height: 30)
-                        .rotationEffect(Angle.degrees(animate ? 720 : 0))
-                    
-                    ScrollView(.vertical, showsIndicators: false) {
-                        ForEach(viewModel.isCacheIsEmpty ? viewModel.questions : viewModel.questionsFromCache, id: \.id) { value in
-                            QuizCardView(quiz: value)
-                                .frame(height: 340)
-                                .frame(maxWidth: .infinity)
-                                .padding(.horizontal, 12)
-                                .onTapGesture {
-                                    self.viewModel.isPresentDetailView.toggle()
-                                    self.viewModel.getDetailQuiz(quizId: value.id)
-                                }
-                        }
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .padding(.horizontal)
-                    .padding(.vertical)
-                }}
+                ListQuizView(viewModel: viewModel)
+            }
         }
         .refreshable {
             withAnimation {
-                self.animate.toggle()
+                self.viewModel.animate.toggle()
                 viewModel.loadedData()
             }
         }

@@ -53,6 +53,9 @@
 		2EF261E02AD41D0200439BE1 /* LastQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261DF2AD41D0200439BE1 /* LastQuiz.swift */; };
 		2EF261E32AD4472F00439BE1 /* InternetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261E22AD4472F00439BE1 /* InternetManager.swift */; };
 		2EF261E62AD4476800439BE1 /* InternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261E52AD4476800439BE1 /* InternetView.swift */; };
+		2EF261EA2AD4503A00439BE1 /* ListQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261E92AD4503A00439BE1 /* ListQuizView.swift */; };
+		2EF261EC2AD4564600439BE1 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261EB2AD4564600439BE1 /* QuestionView.swift */; };
+		2EF261EE2AD4569B00439BE1 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261ED2AD4569B00439BE1 /* AnswerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,9 @@
 		2EF261DF2AD41D0200439BE1 /* LastQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastQuiz.swift; sourceTree = "<group>"; };
 		2EF261E22AD4472F00439BE1 /* InternetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetManager.swift; sourceTree = "<group>"; };
 		2EF261E52AD4476800439BE1 /* InternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetView.swift; sourceTree = "<group>"; };
+		2EF261E92AD4503A00439BE1 /* ListQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListQuizView.swift; sourceTree = "<group>"; };
+		2EF261EB2AD4564600439BE1 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		2EF261ED2AD4569B00439BE1 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +387,7 @@
 			children = (
 				2E6A596F2AD017C30061CC1D /* QuizCardView.swift */,
 				2E6A597F2AD01EC20061CC1D /* QuestionListView.swift */,
+				2EF261E92AD4503A00439BE1 /* ListQuizView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -430,6 +437,8 @@
 			isa = PBXGroup;
 			children = (
 				2E6A59912AD05AB90061CC1D /* DetailQuizView.swift */,
+				2EF261EB2AD4564600439BE1 /* QuestionView.swift */,
+				2EF261ED2AD4569B00439BE1 /* AnswerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -683,6 +692,7 @@
 				2E6A59952AD069D70061CC1D /* CustomHeader.swift in Sources */,
 				2E6A597C2AD01A3C0061CC1D /* ViewStates.swift in Sources */,
 				2EF261E62AD4476800439BE1 /* InternetView.swift in Sources */,
+				2EF261EC2AD4564600439BE1 /* QuestionView.swift in Sources */,
 				2E6A594E2AD00A4E0061CC1D /* QuizDetailModel.swift in Sources */,
 				2E6A59A32AD070AC0061CC1D /* ScoreCardView.swift in Sources */,
 				2E6A597A2AD01A010061CC1D /* CustomImageHelper.swift in Sources */,
@@ -695,6 +705,8 @@
 				2E6A59822AD01EED0061CC1D /* QuestionListViewModel.swift in Sources */,
 				2E6A59922AD05AB90061CC1D /* DetailQuizView.swift in Sources */,
 				2E6A596B2AD015CE0061CC1D /* Color.swift in Sources */,
+				2EF261EE2AD4569B00439BE1 /* AnswerView.swift in Sources */,
+				2EF261EA2AD4503A00439BE1 /* ListQuizView.swift in Sources */,
 				2E6A59852AD020D90061CC1D /* ProgressBarView.swift in Sources */,
 				2E6A59592AD00EA60061CC1D /* QuizRepository.swift in Sources */,
 				2E6A594C2AD00A420061CC1D /* Quiz.swift in Sources */,
