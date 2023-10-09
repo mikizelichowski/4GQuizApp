@@ -18,6 +18,7 @@ final class QuestionListViewModel: ObservableObject {
     
     /// Progress loading
     @Published var isLoading: Bool = false
+    @Published var animate: Bool = false
     @Published var viewStates: ViewStates = ViewStates.ready
     @Published var isCacheIsEmpty: Bool = false
     @Published var currentQuiz: LastQuiz?
