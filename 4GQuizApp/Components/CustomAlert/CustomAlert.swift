@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CustomAlert: View {
-    var actionNewQuiz: () -> ()
-    var actionContinue: () -> ()
+    var title: String
+    var titleLeftButton: String
+    var titleRightButton: String
+    var actionLeftButton: () -> ()
+    var actionRightButton: () -> ()
     
     var body: some View {
         ZStack(alignment: .trailing) {
@@ -19,16 +22,15 @@ struct CustomAlert: View {
                     .scaledToFill()
                     .frame(width: 20, height: 20)
                 
-                Text("Czy chcesz dokończyć ostatni quiz?")
+                Text(title)
                 
                 HStack {
                     Button(action: {
                         withAnimation {
-//                            show.toggle()
-                            actionNewQuiz()
+                            actionLeftButton()
                         }
                     }, label: {
-                        Text("Nowy")
+                        Text(titleLeftButton)
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                             .padding(.vertical, 10)
@@ -39,10 +41,10 @@ struct CustomAlert: View {
                     
                     Button(action: {
                         withAnimation {
-                            actionContinue()
+                            actionRightButton()
                         }
                     }, label: {
-                        Text("Kontynuuj")
+                        Text(titleRightButton)
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                             .padding(.vertical, 10)
@@ -68,6 +70,6 @@ struct CustomAlert: View {
 
 struct CustomAlert_Previews: PreviewProvider {
     static var previews: some View {
-        CustomAlert(actionNewQuiz: {}, actionContinue: {})
+        CustomAlert(title: "title", titleLeftButton: "left", titleRightButton: "right", actionLeftButton: {}, actionRightButton: {})
     }
 }

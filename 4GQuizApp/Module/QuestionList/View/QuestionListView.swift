@@ -17,11 +17,7 @@ struct QuestionListView: View {
                 .ignoresSafeArea()
             
             if viewModel.isShowAlertQuiz {
-                CustomAlert {
-                    viewModel.setNewQuiz()
-                } actionContinue: {
-                    viewModel.setLastQuiz()
-                }
+                CustomAlert(title: "Czy chcesz dokończyć ostatni quiz?", titleLeftButton: "Nowy", titleRightButton: "Kontynuuj", actionLeftButton: { viewModel.setNewQuiz() }, actionRightButton: { viewModel.setLastQuiz() })
             } else {
                 VStack {
                     Image("4G")
