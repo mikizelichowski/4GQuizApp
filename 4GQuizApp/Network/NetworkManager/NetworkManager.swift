@@ -40,7 +40,6 @@ final class NetworkManager: NetworkManagerProtocol {
             switch response.statusCode {
             case 200...299:
                 let decodeData = try JSONDecoder().decode(T.self, from: data)
-                print("DEBUG: decode\(decodeData)")
                 return .success(decodeData)
             case 400:
                 return .failure(.badRequest(message: "Bad request"))
@@ -71,7 +70,6 @@ final class NetworkManager: NetworkManagerProtocol {
                 if response.statusCode == 400 {
                     throw APIError.badRequest(message: "Bad Request")
                 }
-                print("DEBUG: data \(data)")
                 return data
             })
             .decode(type: T.self, decoder: JSONDecoder())
