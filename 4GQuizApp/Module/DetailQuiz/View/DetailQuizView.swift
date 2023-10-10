@@ -74,6 +74,7 @@ struct DetailQuizView: View {
                                     .onAppear {
                                         self.viewModel.currentIndex = lastIndex
                                         self.viewModel.score = lastScore
+                                        self.viewModel.progressBarValue = CGFloat(viewModel.currentIndex) / CGFloat(quiz.questions.count - 1) * 350
                                     }
                                 }
                                 .padding(.horizontal,-15)
@@ -132,11 +133,12 @@ struct DetailQuizView: View {
                 let percent = CGFloat(viewModel.score) / CGFloat(quiz.questions.count) * 100
                 ScoreCardView(isPresentPopupResult: $presentScoreAlert,
                               scoreMessage: viewModel.setMessage(rates: quiz.rates, score: percent)
-                              ,score: percent, onTappedrepeatQuiz: {
+                              ,score: percent, onTappedRepeatQuiz: {
                     self.isContinueLastQuiz = false
                     self.viewModel.cleanCurrentQuizFromCache()
                     self.viewModel.currentIndex = 0
                     self.viewModel.score = 0
+                    self.viewModel.progressBarValue = 0.0
                 }) {
                     withAnimation {
                         dismissView()
