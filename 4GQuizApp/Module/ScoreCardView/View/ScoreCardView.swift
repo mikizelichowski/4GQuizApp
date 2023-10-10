@@ -13,7 +13,7 @@ struct ScoreCardView: View {
     @Binding var isPresentPopupResult: Bool
     var scoreMessage: String
     var score: CGFloat
-    var onTappedrepeatQuiz: () -> ()
+    var onTappedRepeatQuiz: () -> ()
     var onTappedDismiss: () -> ()
     @State private var presentUsersList: Bool = false
     
@@ -55,7 +55,7 @@ struct ScoreCardView: View {
             VStack {
                 VStack(spacing: 10) {
                     ReusableButton(title: "Spróbuj jeszcze raz") {
-                        onTappedrepeatQuiz()
+                        onTappedRepeatQuiz()
                         dismissView()
                     }
                     .padding(.vertical)
@@ -97,6 +97,6 @@ struct ScoreCardView: View {
 
 struct ScoreCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreCardView(isPresentPopupResult: .constant(false), scoreMessage: "", score: 3, onTappedrepeatQuiz: {}, onTappedDismiss: {})
+        ScoreCardView(isPresentPopupResult: .constant(false), scoreMessage: "", score: 3, onTappedRepeatQuiz: {}, onTappedDismiss: {})
     }
 }
