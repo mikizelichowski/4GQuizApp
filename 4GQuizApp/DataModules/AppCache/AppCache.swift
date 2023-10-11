@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import CryptoKit
 
 enum CacheError: Error {
     case failedToSave
@@ -24,18 +25,35 @@ protocol CacheProtocol {
 final class Cache: CacheProtocol {
     private var bag = Set<AnyCancellable>()
     private let userDefaults: UserDefaults
+    enum Constants { static let keyLength = 32 }
 
     init() {
         userDefaults = UserDefaults.standard
     }
     
+    func getSymmetricKey() -> SymmetricKey {
+        let quizName = "quiz"
+        var key = ""
+        if self.getKeyFromKeychain(account: quizName).isEmpty {
+                   key = String(String(NSUUID().uuidString.prefix(Constants.keyLength)))
+                   self.saveKeyToKeychain(key: key, account: quizName)
+               } else {
+                   key = self.getKeyFromKeychain(account: quizName)
+               }
+
+               return SymmetricKey(data: key.data(using: .utf8)!)
+    }
+    
+    
+    // MARK: Cache
     func get(key: CacheKey) -> AnyPublisher<String, CacheError> {
         guard
-            let value = userDefaults.string(forKey: key.rawValue)
+            let value = userDefaults.string(forKey: key.rawValue),
+            let decrypted = try? decrypt(text: value, symmetricKey: getSymmetricKey())
         else {
             return Fail.init(error: CacheError.failedToRetrieve(nil)).eraseToAnyPublisher()
         }
-        return Just(value)
+        return Just(decrypted)
             .setFailureType(to: CacheError.self)
             .eraseToAnyPublisher()
     }
@@ -49,7 +67,11 @@ final class Cache: CacheProtocol {
     }
     
     func save(key: CacheKey, value: String) -> AnyPublisher<Bool, CacheError> {
-        userDefaults.setValue(value, forKey: key.rawValue)
+        guard let encrypted = try? encrypt(text: value, symmetricKey: getSymmetricKey()) else {
+                    return Fail.init(error: CacheError.failedToSave).eraseToAnyPublisher()
+                }
+        
+        userDefaults.setValue(encrypted, forKey: key.rawValue)
         
         return Just(true)
             .setFailureType(to: CacheError.self)
