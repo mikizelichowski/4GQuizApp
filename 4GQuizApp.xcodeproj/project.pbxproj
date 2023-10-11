@@ -49,6 +49,8 @@
 		2EE7A4352AD47B4500448191 /* ScoreCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7A4342AD47B4500448191 /* ScoreCardViewModel.swift */; };
 		2EE7A4372AD47CE000448191 /* AddResultUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7A4362AD47CE000448191 /* AddResultUserView.swift */; };
 		2EE7A4392AD47D0300448191 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7A4382AD47D0300448191 /* UserListView.swift */; };
+		2EE7A43C2AD6895D00448191 /* Cache+EntryptionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7A43B2AD6895D00448191 /* Cache+EntryptionExtension.swift */; };
+		2EE7A43F2AD68AD100448191 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7A43E2AD68AD100448191 /* Keychain.swift */; };
 		2EF261D32AD2FCB100439BE1 /* AppCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261D22AD2FCB100439BE1 /* AppCache.swift */; };
 		2EF261D62AD2FCD300439BE1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261D52AD2FCD300439BE1 /* CacheKey.swift */; };
 		2EF261D92AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF261D82AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift */; };
@@ -128,6 +130,8 @@
 		2EE7A4342AD47B4500448191 /* ScoreCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardViewModel.swift; sourceTree = "<group>"; };
 		2EE7A4362AD47CE000448191 /* AddResultUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddResultUserView.swift; sourceTree = "<group>"; };
 		2EE7A4382AD47D0300448191 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		2EE7A43B2AD6895D00448191 /* Cache+EntryptionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cache+EntryptionExtension.swift"; sourceTree = "<group>"; };
+		2EE7A43E2AD68AD100448191 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		2EF261D22AD2FCB100439BE1 /* AppCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCache.swift; sourceTree = "<group>"; };
 		2EF261D52AD2FCD300439BE1 /* CacheKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKey.swift; sourceTree = "<group>"; };
 		2EF261D82AD2FF8300439BE1 /* QuizCacheRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCacheRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 		2E6A594F2AD00BD90061CC1D /* DataModules */ = {
 			isa = PBXGroup;
 			children = (
+				2EE7A43D2AD68ABD00448191 /* Keychain */,
 				2EF261D12AD2FCA400439BE1 /* AppCache */,
 				2E6A59502AD00BE10061CC1D /* QuizRepository */,
 			);
@@ -541,9 +546,26 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2EE7A43A2AD6894300448191 /* Cache+EntryptionExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2EE7A43B2AD6895D00448191 /* Cache+EntryptionExtension.swift */,
+			);
+			path = "Cache+EntryptionExtension";
+			sourceTree = "<group>";
+		};
+		2EE7A43D2AD68ABD00448191 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				2EE7A43E2AD68AD100448191 /* Keychain.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		2EF261D12AD2FCA400439BE1 /* AppCache */ = {
 			isa = PBXGroup;
 			children = (
+				2EE7A43A2AD6894300448191 /* Cache+EntryptionExtension */,
 				2EF261D42AD2FCCA00439BE1 /* CacheKey */,
 				2EF261D22AD2FCB100439BE1 /* AppCache.swift */,
 			);
@@ -745,6 +767,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE7A43C2AD6895D00448191 /* Cache+EntryptionExtension.swift in Sources */,
 				2E6A59462ACFF5C30061CC1D /* NetworkManager.swift in Sources */,
 				2E6A59702AD017C30061CC1D /* QuizCardView.swift in Sources */,
 				2E6A59952AD069D70061CC1D /* CustomHeader.swift in Sources */,
@@ -761,6 +784,7 @@
 				2E6A59572AD00EA00061CC1D /* QuizRepositoryProtocol.swift in Sources */,
 				2EF261D62AD2FCD300439BE1 /* CacheKey.swift in Sources */,
 				2E6A59492ACFF5D40061CC1D /* APIConstants.swift in Sources */,
+				2EE7A43F2AD68AD100448191 /* Keychain.swift in Sources */,
 				2E6A59822AD01EED0061CC1D /* QuestionListViewModel.swift in Sources */,
 				2E6A59922AD05AB90061CC1D /* DetailQuizView.swift in Sources */,
 				2E6A596B2AD015CE0061CC1D /* Color.swift in Sources */,
