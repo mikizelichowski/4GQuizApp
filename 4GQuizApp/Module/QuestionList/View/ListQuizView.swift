@@ -26,7 +26,7 @@ struct ListQuizView: View {
                             .frame(maxWidth: .infinity)
                             .padding(.horizontal, 12)
                             .onTapGesture {
-                                self.viewModel.isPresentDetailView.toggle()
+                                self.viewModel.isPresentedDetailView.toggle()
                                 self.viewModel.getDetailQuiz(quizId: value.id)
                             }
                     }

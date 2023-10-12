@@ -27,7 +27,11 @@ final class QuestionListViewModel: ObservableObject {
     @Published var isShowAlertQuiz: Bool = false
     
     @Published var isContinueLastQuiz: Bool = false
-    @Published var isPresentDetailView: Bool = false
+    @Published var isPresentedDetailView: Bool = false
+    
+    /// error alert
+    @Published var isPresentedErrorPopup: Bool = false
+    @Published var error: Error?
     
     /// Repositories
     @Published private var cacheRepository = DIProvider.quizCacheRepository
@@ -55,7 +59,7 @@ final class QuestionListViewModel: ObservableObject {
     func setLastQuiz() {
         self.isShowAlertQuiz = false
         self.isContinueLastQuiz = true
-        self.isPresentDetailView.toggle()
+        self.isPresentedDetailView.toggle()
     }
     
     private func setViewState(to state: ViewStates) {
@@ -64,8 +68,11 @@ final class QuestionListViewModel: ObservableObject {
             self.isLoading = state == .loading
             
             switch state {
-            case .empty, .ready, .error:
+            case .empty, .ready:
                 self.isLoading = false
+            case .error:
+                self.isLoading = false
+                self.isPresentedErrorPopup = true
             case .loading:
                 self.isLoading = true
             }
@@ -82,7 +89,7 @@ final class QuestionListViewModel: ObservableObject {
                 self.saveQuizzesToCache(value: success.items)
                 setViewState(to: .ready)
             case .failure(let failure):
-                print("DEBUG: error get data \(failure.localizedDescription)")
+                self.error = failure
                 setViewState(to: .error)
             }
         }
@@ -98,7 +105,7 @@ final class QuestionListViewModel: ObservableObject {
                 self.saveQuizDetailToCache(value: success)
                 setViewState(to: .ready)
             case .failure(let failure):
-                print("DEBUG: ERROR_GET_DATAIL_QUIZ_DATA \(failure.localizedDescription)")
+                self.error = failure
                 setViewState(to: .error)
             }
         }
