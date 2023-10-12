@@ -19,15 +19,17 @@ struct ListQuizView: View {
                 .rotationEffect(Angle.degrees(viewModel.animate ? 720 : 0))
             
             ScrollView(.vertical, showsIndicators: false) {
-                ForEach(viewModel.isCacheIsEmpty ? viewModel.questions : viewModel.questionsFromCache, id: \.id) { value in
-                    QuizCardView(quiz: value)
-                        .frame(height: 340)
-                        .frame(maxWidth: .infinity)
-                        .padding(.horizontal, 12)
-                        .onTapGesture {
-                            self.viewModel.isPresentDetailView.toggle()
-                            self.viewModel.getDetailQuiz(quizId: value.id)
-                        }
+                LazyVStack {
+                    ForEach(viewModel.isCacheIsEmpty ? viewModel.questions : viewModel.questionsFromCache, id: \.id) { value in
+                        QuizCardView(quiz: value)
+                            .frame(height: 340)
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal, 12)
+                            .onTapGesture {
+                                self.viewModel.isPresentDetailView.toggle()
+                                self.viewModel.getDetailQuiz(quizId: value.id)
+                            }
+                    }
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
