@@ -20,6 +20,18 @@ struct QuestionListView: View {
             } else {
                 ListQuizView(viewModel: viewModel)
             }
+            
+            if viewModel.isPresentedErrorPopup {
+                CustomAlert(title: viewModel.error?.localizedDescription.description ?? "Error",
+                            titleLeftButton: "Spróbuj ponownie",
+                            titleRightButton: "Anuluj",
+                            actionLeftButton: {
+                    viewModel.loadedData()
+                    viewModel.isPresentedErrorPopup.toggle()
+                }, actionRightButton: {
+                    viewModel.isPresentedErrorPopup.toggle()
+                })
+            }
         }
         .refreshable {
             withAnimation {
@@ -27,7 +39,7 @@ struct QuestionListView: View {
                 viewModel.loadedData()
             }
         }
-        .fullScreenCover(isPresented: $viewModel.isPresentDetailView, content: {
+        .fullScreenCover(isPresented: $viewModel.isPresentedDetailView, content: {
             ZStack {
                 Color.lightBlueGreyThree.ignoresSafeArea()
                 if viewModel.currentQuiz != nil {
