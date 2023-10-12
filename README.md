@@ -2,12 +2,12 @@
 
 - Realm(save results)
 - Cache: UserDefaults(Combine)
-- keychain
+- Keychain
 - Api: Async/await
 - Repositories
 - SwiftUI
-- use app offline and online
-- ios >= iOS 15
+- Use app offline and online
+- iOS >= iOS 15
 
 Endpoints:
 quiz list: https://quiz.o2.pl/api/v1/quizzes/0/100
