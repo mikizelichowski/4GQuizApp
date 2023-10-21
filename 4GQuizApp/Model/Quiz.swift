@@ -19,7 +19,7 @@ struct Quiz: Codable {
     let title: String
     let type: String
     let content: String
-    let tags: [Tags]
+    let tags: [Tags]?
     let buttonStart: String
     let shareTitle: String
     let categories: [Categories]
