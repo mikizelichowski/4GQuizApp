@@ -123,6 +123,7 @@ struct DetailQuizView: View {
                         self.dismissView()
                         self.isContinueLastQuiz = false
                         self.viewModel.cleanCurrentQuizFromCache()
+                        self.presentCloseAlert.toggle()
                     }, actionRightButton: {
                         presentCloseAlert.toggle()
                     })
