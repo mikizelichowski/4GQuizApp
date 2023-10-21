@@ -52,8 +52,8 @@ final class NetworkManager: NetworkManagerProtocol {
             default:
                 return .failure(.unexepctedStatusCode(message: "\(response.statusCode)"))
             }
-        } catch {
-            return .failure(.unknown)
+        } catch let error {
+            return .failure(.unknown(message: "\(error)"))
         }
     }
     

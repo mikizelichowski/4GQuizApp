@@ -13,5 +13,5 @@ enum APIError: Error {
     case badRequest(message: String)
     case unexepctedStatusCode(message: String)
     case apiError(message: String)
-    case unknown
+    case unknown(message: String)
 }
